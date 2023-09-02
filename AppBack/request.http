@@ -1,0 +1,142 @@
+
+//GET USERS
+#####
+GET http://localhost:9000/api/users HTTP/1.1
+
+
+//GET ASESORIAS
+#####
+GET http://localhost:9000/api/asesorias HTTP/1.1
+
+
+
+
+
+#####
+
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Juan",
+    "lastname": "Mendez",
+    "age": 24
+}
+
+#####
+POST http://localhost:9000/api/usersMany HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "name": "Pepito",
+        "lastname": "Perez",
+        "age": 45
+    },
+    {
+        "name": "Pepita",
+        "lastname": "Lozano",
+        "age": 34
+    },
+    {
+        "name": "Juan",
+        "lastname": "Arias",
+        "age": 32
+    }
+]
+
+
+//POST ASESORIAS
+#####
+POST http://localhost:9000/api/asesoriasMany HTTP/1.1
+Content-Type: application/json
+
+[
+    {
+        "nombre": "Diseño e Implementaciòn del SG-SST",
+        "descripcion": "Acompañamiento y asesoria tecnica en todo lo referente al SG-SST"
+    },
+    {
+        "nombre": "Evaluaciòn inicial del SG-SST",
+        "descripcion": "Evaluaciòn inicial de acuerdo a la Res 0312 de estandares minimos de SST"
+    },
+    {
+        "nombre": "Programas de Gestiòn de Riesgos",
+        "descripcion": "Diseño e implementaciòn de programas preventivos de acuerdo a riesgos."
+    },
+    {
+        "nombre": "Capacitaciones de SST",
+        "descripcion": "Capacitaciones presenciales o virtuales enfocadas en los riesgos de la empresa."
+    },
+    {
+        "nombre": "Matriz de Peligros",
+        "descripcion": "Visitas tecnicas para identificar peligros, evaluaciòn y valoraciòn de riesgos"
+    },
+    {
+        "nombre": "Investigaciones de AT y EL",
+        "descripcion": "Visitas tecnicas, entrevistas y acompañamiento en accidentes de trabajo y enfermedad laboral"
+    },
+    {
+        "nombre": "Documentaciòn del SG-SST",
+        "descripcion": "Documentaciòn virtual y fisica de todos los documentos de acuerdo al PHVA"
+    },
+    {
+        "nombre": "Aplicativo Web de evaluaciòn inicial del SG-SST",
+        "descripcion": "Aplicativo evaluaciòn inicial de acuerdo a la Res 0312 de estandares minimos de SST"
+    },
+    {
+        "nombre": "Aplicativo Web para la administraciòn del SG-SST",
+        "descripcion": "Aplicativo para la gestiòn y desarrollo del SG-SST"
+    }
+
+]
+
+
+
+
+
+######
+
+GET http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+
+
+####
+
+PUT http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name": "Rosario",
+        "lastname": "Cruz",
+        "age": 40
+    }
+
+
+#####
+DELETE http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+
+
+#####
+PUT http://localhost:9000/api/usersMany HTTP/1.1
+Content-Type: application/json
+
+{
+    "age": 40
+}
+
+
+#####
+PUT http://localhost:9000/api/users/64e005f155f801dd81cf7052 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "age": 45
+    }
+
+
+
+#####
+GET http://localhost:9000/api/users/64e005f155f801dd81cf7052 HTTP/1.1
+
+#####
+GET http://localhost:9000/api/users/prueba@gmail.com HTTP/1.1
