@@ -23,4 +23,4 @@ const inhouseSchema = mongoose.Schema(
 
 
 
-export default mongoose.model('inhouseSST', inhouseSchema);
+export default mongoose.model('inhousessts', inhouseSchema);

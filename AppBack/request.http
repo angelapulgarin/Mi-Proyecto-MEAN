@@ -1,16 +1,26 @@
+// USUARIOS
 
-//GET USERS
+//GET TODOS USERS
 #####
 GET http://localhost:9000/api/users HTTP/1.1
 
 
-//GET ASESORIAS
+
+//GET POR ID
+
+######
+GET http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+
+
+//GET POR EMAIL
+
 #####
-GET http://localhost:9000/api/asesorias HTTP/1.1
+GET http://localhost:9000/api/users/prueba@gmail.com HTTP/1.1
 
 
 
 
+//POST USER UNO SOLO
 
 #####
 
@@ -22,6 +32,9 @@ Content-Type: application/json
     "lastname": "Mendez",
     "age": 24
 }
+
+
+//POST VARIOS USUARIOS
 
 #####
 POST http://localhost:9000/api/usersMany HTTP/1.1
@@ -46,7 +59,78 @@ Content-Type: application/json
 ]
 
 
-//POST ASESORIAS
+
+
+// PUT UNO SOLO
+
+####
+PUT http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "name": "Rosario",
+        "lastname": "Cruz",
+        "age": 40
+    }
+
+
+// PUT VARIOS
+
+#####
+PUT http://localhost:9000/api/usersMany HTTP/1.1
+Content-Type: application/json
+
+{
+    "age": 40
+}
+
+
+#####
+PUT http://localhost:9000/api/users/64e005f155f801dd81cf7052 HTTP/1.1
+Content-Type: application/json
+
+    {
+        "age": 45
+    }
+
+
+
+
+//DELETE UNO SOLO
+
+#####
+DELETE http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+
+
+
+
+
+//ASESORIAS
+
+
+//GET TODOS ASESORIAS
+#####
+GET http://localhost:9000/api/asesorias HTTP/1.1
+
+
+
+
+
+//POST UNO SOLO
+
+#####
+
+POST http://localhost:9000/api/asesorias HTTP/1.1
+Content-Type: application/json
+
+    {
+        "nombre": "prueba",
+        "descripcion": "pruebita"
+    }
+
+
+
+//POST  VARIOS ASESORIAS
 #####
 POST http://localhost:9000/api/asesoriasMany HTTP/1.1
 Content-Type: application/json
@@ -95,48 +179,64 @@ Content-Type: application/json
 
 
 
-######
+//INHOUSE
 
-GET http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+//GET TODOS 
+#####
+GET http://localhost:9000/api/inhouse HTTP/1.1
 
 
-####
 
-PUT http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
+//POST  VARIOS INHPUSE
+#####
+POST http://localhost:9000/api/inhouseMany HTTP/1.1
 Content-Type: application/json
 
+[
     {
-        "name": "Rosario",
-        "lastname": "Cruz",
-        "age": 40
+        "nombre":"Tècnico SST",
+        "descripcion": "Capacitaciòn, inspecciones, implementaciòn SG-SST",
+        "modalidad":"Presencial-medio tiempo"
+    },
+    {
+        "nombre":"Profesional SST",
+        "descripcion":"Diseño, implementaciòn del SG-SST, administraciòn del SG-SST, capacitaciòn, investigaciones de AT y EL",
+        "modalidad":"Presencial-medio tiempo"
     }
 
+]
+
+
+//POST REGISTER
 
 #####
-DELETE http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
-
-
-#####
-PUT http://localhost:9000/api/usersMany HTTP/1.1
+POST http://localhost:9000/api/register HTTP/1.1
 Content-Type: application/json
 
 {
-    "age": 40
+    "nombreEmpresa": "Empresa Prueba",
+    "nit": "123456789-0",
+    "numeroEmpleados": 20,
+    "representanteLegal": "Maria Rodriguez",
+    "actividadEconomica": "Desarrollo de software y servicios de consultoría en tecnología de la información.",
+    "email": "correoprueba@gmail.com",
+    "password": "pruebac1234"
 }
 
 
+
+//POST LOGIN
+
 #####
-PUT http://localhost:9000/api/users/64e005f155f801dd81cf7052 HTTP/1.1
+POST http://localhost:9000/api/login HTTP/1.1
 Content-Type: application/json
 
-    {
-        "age": 45
-    }
-
-
-
-#####
-GET http://localhost:9000/api/users/64e005f155f801dd81cf7052 HTTP/1.1
-
-#####
-GET http://localhost:9000/api/users/prueba@gmail.com HTTP/1.1
+{
+    "nombreEmpresa": "Empresa Prueba",
+    "nit": "123456789-0",
+    "numeroEmpleados": 20,
+    "representanteLegal": "Maria Rodriguez",
+    "actividadEconomica": "Desarrollo de software y servicios de consultoría en tecnología de la información.",
+    "email": "correoprueba@gmail.com",
+    "password": "pruebac1234"
+}

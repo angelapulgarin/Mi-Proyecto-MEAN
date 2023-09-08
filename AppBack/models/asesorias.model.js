@@ -19,4 +19,4 @@ const asesoriasSchema = mongoose.Schema(
 
 
 
-export default mongoose.model('asesoriasst', asesoriasSchema);
+export default mongoose.model('asesoriassts', asesoriasSchema);

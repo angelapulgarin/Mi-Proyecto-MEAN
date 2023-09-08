@@ -1,6 +1,7 @@
 import express from "express";
 import userSchema from "../../models/users.model.js"
-
+import bcrypt from "bcryptjs"
+import jwt from "jsonwebtoken"
 
 const router = express.Router()
 
@@ -52,9 +53,6 @@ router.get('/users', (require, response) => {
  });
 
 
-
-
-
 // Actualizar usuario
 
 router.put('/users/:id',(require, response) =>{
@@ -64,7 +62,6 @@ router.put('/users/:id',(require, response) =>{
     .then((data) => response.json(data))
     .catch((error)=> response.json({ message: error }))
 });
-
 
 
 
@@ -108,8 +105,47 @@ router.get('/users/:email',(require, response) =>{
 });
 
 
+//POST REGISTRO
+router.post('/register', async (require, response)=>{
+    try {
+        require.body.password = bcrypt.hashSync(require.body.password, 12);
+        const userCreate = await userSchema.create(require.body);
+        response.json(userCreate);
+    } catch (error) {
+        response.json({error: error.message})
+    }
+});
 
 
+// POST LOGIN
+
+router.post('/login', async (require, response)=>{
+    //Comprobar existencia del email
+    const user = await userSchema.findOne({ email: require.body.email });
+    if(!user){
+        return response.json({ error: 'Error, revisa tu nombre de usuario y contraseña' })
+    }
+
+    const validar = bcrypt.compareSync(require.body.password, user.password)
+    if(!validar){
+        return response.json({ error: 'Error, revisa tu nombre de usuario y contraseña' })
+    }
+
+    response.json({ success: 'Has ingresado con éxito', token: createToken(userSchema) });
+    //response.json({ success: 'Has ingresado con éxito' });
+});
+
+
+
+//TOKEN
+function createToken(userSchema) {
+    const payload = {
+        user_id: userSchema._id,
+        user_role: userSchema.user_role
+    }
+    return jwt.sign(payload,'Mi primer Token');
+    
+}
 
 
 

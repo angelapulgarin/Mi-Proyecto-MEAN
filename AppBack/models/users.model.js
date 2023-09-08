@@ -23,6 +23,19 @@ const userSchema = mongoose.Schema(
             type: String,
             require: true,
             
+        },
+        email:{
+            type: String,
+            require: true,
+            unique: true
+        },
+        password:{
+            type: String,
+            require:true
+        },
+        role:{
+            type :String,
+            default:"regular"
         }
 
     }

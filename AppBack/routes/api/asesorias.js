@@ -17,13 +17,13 @@ router.get ('/asesorias', (require, response) => {
 
 //crear uno solo
 
-// router.post('/asesorias',(require, response) => {
-//     const asesoria = asesoriasSchema(require.body);
-//     asesoria
-//     .save()
-//     .then((data) => response.json(data))
-//     .catch((error)=>response.json({ message: error}))
-// });
+router.post('/asesorias',(require, response) => {
+    const asesoria = asesoriasSchema(require.body);
+    asesoria
+    .save()
+    .then((data) => response.json(data))
+    .catch((error)=>response.json({ message: error}))
+});
 
 // Crear arreglo
 
