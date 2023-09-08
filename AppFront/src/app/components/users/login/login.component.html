@@ -1,0 +1,16 @@
+<section class="contenedor">
+
+    <form class="formulario" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <h3>Iniciar sesión</h3>
+        <section class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email">
+        </section>
+        <section class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </section>
+        <input class="boton" type="submit" value="Ingresar">
+    </form>
+
+</section>

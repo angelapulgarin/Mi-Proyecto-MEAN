@@ -1,0 +1,38 @@
+
+
+<section class="contenedor">
+
+    
+    <form class="formulario" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <h3>Registrate</h3>
+        <section class="mb-3">
+            <label>Nombre de la empresa:</label>
+            <input type="text" class="form-control" formControlName="nombreEmpresa">
+        </section>
+        <section class="mb-3">
+            <label>Nit:</label>
+            <input type="text" class="form-control" formControlName="nit">
+        </section>
+        <section class="mb-3">
+            <label>Número de Empleados:</label>
+            <input type="number" class="form-control" formControlName="numeroEmpleados">
+        </section>
+        <section class="mb-3">
+            <label>Representante Legal:</label>
+            <input type="text" class="form-control" formControlName="representanteLegal">
+        </section>
+        <section class="mb-3">
+            <label>Actividad Economica:</label>
+            <input type="text" class="form-control" formControlName="actividadEconomica">
+        </section>
+        <section class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email">
+        </section>
+        <section class="mb-3">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </section>
+        <input class="boton" type="submit" value="Enviar" >
+    </form>
+</section>

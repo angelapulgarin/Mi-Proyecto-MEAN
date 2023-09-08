@@ -1,0 +1,35 @@
+header {
+    background: #263047;
+    padding: 0;
+    height: 50px;
+}
+
+ul {
+    margin-top: 0;
+    
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aliceblue;
+    margin: 1%;
+    display: flex; /* Alinea horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos dentro de li */
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue; /* Establece el color del texto para que sea coherente */
+}
+
+
+
+
+
+
+
