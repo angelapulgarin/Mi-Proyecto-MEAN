@@ -12,6 +12,8 @@ import { LoginComponent } from './components/users/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/body/home/home.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/body/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { RouterModule } from '@angular/router';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
+    FooterComponent,
+    
   
   ],
   imports: [

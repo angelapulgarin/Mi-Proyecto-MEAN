@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/service/users.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class LoginComponent {
   formulario: FormGroup
 
   userService =inject(UsersService)
+  router = inject(Router);
 
 
   constructor() {
@@ -24,10 +26,12 @@ export class LoginComponent {
 
  async onSubmit(){
     const res = await this.userService.login(this.formulario.value);
-    console.log(res)
+    
+    if(!res.error){
+      localStorage.setItem('user_token', res.token);
+      this.router.navigate(['/servicios'])
+    }
   }
-
-
 
 
 

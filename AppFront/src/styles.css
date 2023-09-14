@@ -4,5 +4,6 @@ body {
     background: #c9d6ff70;
     background: -webkit-linear-gradient(to right, #e2e2e26c, #c9d6ff5d);
     background: linear-gradient(to right, #e2e2e254, #c9d6ff62);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }

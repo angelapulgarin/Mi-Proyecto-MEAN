@@ -111,7 +111,7 @@ DELETE http://localhost:9000/api/users/64dedc49a52805869731ba68 HTTP/1.1
 //GET TODOS ASESORIAS
 #####
 GET http://localhost:9000/api/asesorias HTTP/1.1
-
+autorizado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQ1Njk1ODZ9.b_WDGr6phUL-DU7g8d9dZLzjV2QuBtp30N3lAKkAgWs
 
 
 
