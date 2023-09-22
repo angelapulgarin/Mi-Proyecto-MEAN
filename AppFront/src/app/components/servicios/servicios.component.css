@@ -1,25 +1,38 @@
-.tituloServicios {
+.tituloServicios,
+.tituloInhouse {
   color: #224b9d;
   font-weight: bold;
   text-align: center;
   margin: 2%;
-  /* font-size: 30px; */
+  margin-top: 7%;
+  margin-bottom: 5%;
+  
 }
 
 .imgfondo {
-  background-image: url(../../../assets/imagens/ttitulo.jpg);
+  background-image: url(https://www.eafit.edu.co/proyecto50/proyectos/PublishingImages/Paginas/salud-y-seguridad-en-el-trabajo/SGSST-10.png);
   background-repeat: no-repeat;
-  object-fit: cover;
   width: 100%;
-  height: 60vh;
-  max-height: 100%;
+  height: 20rem;
+  max-height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 
 
 
 
-.card1 {
+
+.contenedor-cards {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8, .card9 {
 
   border-radius: 20px;
   background: #f5f5f5;
@@ -46,9 +59,7 @@
   user-select: none;
   font-weight: bolder;
   color: black;
-  /* background-image: url(../../../assets/imagens/1.jpg);
-  background-position: -1rem; */
-  margin: 5%;
+  margin: 3%;
 }
 
 .card-details {
@@ -83,21 +94,167 @@
 .text-title {
   font-size: 1.5em;
   font-weight: bold;
+  color: white;
+  /* background-color: #12131318;
+  border-radius: 10px;
+  background-color: #224b9d8b; */
 }
 
 /*Hover*/
-.card1:hover {
-  border-color: #008bf8;
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover, .card7:hover, .card8:hover, .card9:hover {
+  border-color: #224b9d;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
 }
 
-.card1:hover .card-button {
+.card1:hover .card-button, .card2:hover .card-button, .card3:hover .card-button, .card4:hover .card-button, .card5:hover .card-button, .card6:hover .card-button, .card7:hover .card-button, .card8:hover .card-button, .card9:hover .card-button {
   transform: translate(-50%, 50%);
   opacity: 1;
 }
 
 
-.cards {
+
+
+
+.card1 {
+  background-image: url(../../../assets/imagens/servicios/diseno3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+.card2 {
+
+  width: 30%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/evaluacion.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+
+.card3 {
+  width: 20%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/capacita.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.card4 {
+
+  width: 20%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/programa.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+
+
+.card5 {
+  width: 20%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/matriz.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.card6 {
+  width: 30%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/inves.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.card7 {
+  width: 25%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/emergencias.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.card8 {
+  width: 20%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/dinamicas.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card9 {
+  width: 25%;
+  height: 254px;
+  background-image: url(../../../assets/imagens/servicios/aplicativo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+/* Sección Servicios Inhouse: */
+
+
+.text-inhouse {
+  margin: 5%;
+  margin-bottom: 2%;
+  padding: 50px;
+  padding-top: 20px;
+  color: #65b24a;
+  font-size: 20px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
+
+
+.inhouse-cards {
+  display: flex;
+  justify-content: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 10%;
+  
+
+}
+
+
+.card-title {
+  color: #224b9d;
+  font-weight: bold;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  text-align: center;
+
+}
+
+.card{
+  margin:2%;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+

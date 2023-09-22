@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsersService } from 'src/app/service/users.service';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  router = inject(Router);
+  userService = inject(UsersService);
+
+  onClickLogout () {
+    localStorage.removeItem('user_token');
+    this.router.navigate(['/home']);
+  }
 
 }

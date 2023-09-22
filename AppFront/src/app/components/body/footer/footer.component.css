@@ -65,6 +65,11 @@
     background-color: #65b24a;
   }
 
+  a {
+    text-decoration: none;
+    color: aliceblue; /* Establece el color del texto para que sea coherente */
+}
+
 
 
 

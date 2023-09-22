@@ -13,6 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/body/home/home.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/body/footer/footer.component';
+import { ContactanosComponent } from './components/contactanos/contactanos.component';
+import { InicioPanelComponent } from './components/inicio-panel/inicio-panel.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { FooterComponent } from './components/body/footer/footer.component';
     LoginComponent,
     HomeComponent,
     FooterComponent,
+    ContactanosComponent,
+    InicioPanelComponent,
     
   
   ],

@@ -10,7 +10,8 @@ export class ListaServiciosService {
 
   constructor(public httpClient: HttpClient) { }
 
-
+  
+  
   headers() {
     return {
       headers: new HttpHeaders({ 'autorizado': localStorage.getItem('user_token')! })
@@ -21,7 +22,7 @@ export class ListaServiciosService {
   traerAsesorias() {
 
     return firstValueFrom(
-      this.httpClient.get<any[]>('http://localhost:9000/api/asesorias', this.headers()));
+      this.httpClient.get<any[]>('http://localhost:9000/api/servicios', this.headers()));
   }
 
 

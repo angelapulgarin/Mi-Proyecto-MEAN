@@ -29,7 +29,7 @@ export class LoginComponent {
     
     if(!res.error){
       localStorage.setItem('user_token', res.token);
-      this.router.navigate(['/servicios'])
+      this.router.navigate(['/inicio-panel'])
     }
   }
 
