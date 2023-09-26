@@ -9,12 +9,7 @@ import { UsersService } from 'src/app/service/users.service';
 })
 export class HeaderComponent {
 
-  router = inject(Router);
-  userService = inject(UsersService);
+  userService = inject(UsersService)
 
-  onClickLogout () {
-    localStorage.removeItem('user_token');
-    this.router.navigate(['/home']);
-  }
-
+  
 }

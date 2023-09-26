@@ -8,17 +8,17 @@ import { ListaServiciosService } from 'src/app/service/lista-servicios.service';
 })
 export class ServiciosComponent {
 
-  constructor (public servicio: ListaServiciosService ) {}
+//   constructor (public servicio: ListaServiciosService ) {}
 
-  arrServicios:any[] = [];
+//   arrServicios:any[] = [];
   
 
 
- async ngOnInit(){
-    const listaServicios = await this.servicio.traerAsesorias(); 
-    this.arrServicios = listaServicios
+//  async ngOnInit(){
+//     const listaServicios = await this.servicio.traerAsesorias(); 
+//     this.arrServicios = listaServicios
 
 
 
 
- }};
+ };

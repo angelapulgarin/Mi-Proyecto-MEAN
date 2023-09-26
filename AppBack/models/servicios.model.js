@@ -2,7 +2,7 @@
 import mongoose from "mongoose";
 
 
-const asesoriasSchema = mongoose.Schema(
+const serviciosSchema = mongoose.Schema(
     {
         nombre:{
             type: String,
@@ -19,4 +19,4 @@ const asesoriasSchema = mongoose.Schema(
 
 
 
-export default mongoose.model('asesoriassts', asesoriasSchema);
+export default mongoose.model('servicios', serviciosSchema);

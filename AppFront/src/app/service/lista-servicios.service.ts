@@ -19,18 +19,14 @@ export class ListaServiciosService {
   }
 
 
-  traerAsesorias() {
+  traerSeguimientos() {
 
     return firstValueFrom(
-      this.httpClient.get<any[]>('http://localhost:9000/api/servicios', this.headers()));
+      this.httpClient.get<any[]>('http://localhost:9000/api/seguimiento', this.headers()));
   }
 
 
 
-
-
-  // traerInhouse(){
-  //   return 	this.httpClient.get("http://localhost:9000/api/inhouse");}
 
 
 

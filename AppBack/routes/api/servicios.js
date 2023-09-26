@@ -1,13 +1,13 @@
 import express from "express"
-import inhouseSchema from "../../models/inhouse.model.js"
+import serviciosSchema from "../../models/servicios.model.js"
 
 
 const router = express.Router()
 
 //traer todos
 
-router.get ('/inhouse', (require, response) => {
-    inhouseSchema
+router.get ('/servicios', (require, response) => {
+    serviciosSchema
         .find()
         .then((data) => response.json(data))
         .catch((error) => response.json({ message: error }))
@@ -17,9 +17,9 @@ router.get ('/inhouse', (require, response) => {
 
 //crear uno solo
 
-router.post('/inhouse',(require, response) => {
-    const servInhouse = inhouseSchema(require.body);
-    servInhouse
+router.post('/servicios',(require, response) => {
+    const servicio = serviciosSchema(require.body);
+    servicio
     .save()
     .then((data) => response.json(data))
     .catch((error)=>response.json({ message: error}))
@@ -27,9 +27,9 @@ router.post('/inhouse',(require, response) => {
 
 // Crear arreglo
 
-router.post('/inhouseMany',(require, response) => {
-    const inhouseData = require.body;
-    inhouseSchema.insertMany(inhouseData)
+router.post('/serviciosMany',(require, response) => {
+    const serviciosData = require.body;
+   serviciosSchema.insertMany(serviciosData)
     .then((data) => response.json(data))
     .catch((error)=>response.json({ message: error}))
 });
@@ -37,9 +37,9 @@ router.post('/inhouseMany',(require, response) => {
 
 //traer por id
 
-router.get('/inhouse/:id', (require, response) => {
+router.get('/servicios/:id', (require, response) => {
     const { id } = require.params;
-    inhouseSchema.findById(id)
+    serviciosSchema.findById(id)
         .then((data) => response.json(data))
         .catch((error) => response.json({ message: error }))
 });
@@ -48,19 +48,19 @@ router.get('/inhouse/:id', (require, response) => {
 
 // Actualizar por id
 
-router.put('/inhouse/:id',(require, response) =>{
+router.put('/servicios/:id',(require, response) =>{
     const {id} = require.params;
-    const {nombre, descripcion, modalidad} = require.body;
-    inhouseSchema.updateOne({_id: id}, {$set:{nombre, descripcion, modalidad}})
+    const {nombre, descripcion} = require.body;
+    serviciosSchema.updateOne({_id: id}, {$set:{nombre, descripcion}})
     .then((data) => response.json(data))
     .catch((error)=> response.json({ message: error }))
 });
 
 
-//Eliminar usuario
-router.delete('/inhouse/:id',(require, response) =>{
+//Eliminar 
+router.delete('/servicios/:id',(require, response) =>{
     const {id} = require.params;
-    inhouseSchema.deleteOne({_id: id})
+    serviciosSchema.deleteOne({_id: id})
     .then((data) => response.json(data))
     .catch((error)=> response.json({ message: error }))
 });

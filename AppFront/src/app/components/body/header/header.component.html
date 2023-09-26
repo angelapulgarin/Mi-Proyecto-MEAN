@@ -1,7 +1,7 @@
 
-    <header>
+    <header *ngIf="!userService.isLogged()">
 
-        <nav *ngIf="!userService.isLogged()" class="navContent">
+        <nav  class="navContent">
             
             <Ul >
                 <a routerLink="home" routerLinkActive="active">A&M Consultores</a>
@@ -10,7 +10,7 @@
                 <li ><a routerLink="contactanos"  routerLinkActive="active">Contactanos</a></li>
                 <li><a routerLink="register"  routerLinkActive="active">Regístrate</a></li>
                 <li><a routerLink="login"  routerLinkActive="active">Iniciar Sesión</a></li>
-                <li><a (click)="onClickLogout()">Cerrar sesión</a></li>
+              
             </Ul>
         
         </nav>

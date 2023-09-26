@@ -1,9 +1,60 @@
+<section class="contenedor-bienvenido">
 
-<h1>Bienvenido</h1>
+    <h1 class="bienvenido">Bienvenido</h1>
+    <hr>
+
+</section>
 
 
 
-<p>Servicios Contratados</p>
-<p>Seguimiento SG-SST</p>
-<p>Recursos</p>
-<p>Beneficios</p>
+<section class="contenedor-general">
+
+
+    <section class="contenedor-navbar">
+
+        <ul class="nav flex-column nav-underline ">
+            <li class="nav-item">
+                <a class="nav-link"  aria-current="page" routerLink="/inicio-panel/seguimiento" routerLinkActive="active">Seguimiento</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"   routerLink="/inicio-panel/recursos" routerLinkActive="active">Recursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="/inicio-panel/beneficios" routerLinkActive="active">Beneficios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"   routerLink="/inicio-panel/perfil" routerLinkActive="active">Mi perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="#"  (click)="onClickLogout()"   >Cerrar sesión</a>
+            </li>
+        </ul>
+
+
+
+
+
+    </section>
+
+    <section class="contenedor-componentes">
+
+       <router-outlet></router-outlet>
+
+    </section>
+
+
+   
+
+
+
+</section>
+
+
+<!-- <nav class="navbar   nav flex-column">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/imagens/contact/Imagen1.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Bootstrap
+      </a>
+    </div>
+  </nav> -->

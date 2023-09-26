@@ -1,13 +1,13 @@
 import express from "express"
-import asesoriasSchema from "../../models/asesorias.model.js"
+import seguimientoSchema from "../../models/seguimiento.models.js"
 
 
 const router = express.Router()
 
 //traer todos
 
-router.get ('/asesorias', (require, response) => {
-    asesoriasSchema
+router.get ('/seguimiento', (require, response) => {
+    seguimientoSchema
         .find()
         .then((data) => response.json(data))
         .catch((error) => response.json({ message: error }))
@@ -17,9 +17,9 @@ router.get ('/asesorias', (require, response) => {
 
 //crear uno solo
 
-router.post('/asesorias',(require, response) => {
-    const asesoria = asesoriasSchema(require.body);
-    asesoria
+router.post('/seguimiento',(require, response) => {
+    const seguimiento = seguimientoSchema(require.body);
+    seguimiento
     .save()
     .then((data) => response.json(data))
     .catch((error)=>response.json({ message: error}))
@@ -27,9 +27,9 @@ router.post('/asesorias',(require, response) => {
 
 // Crear arreglo
 
-router.post('/asesoriasMany',(require, response) => {
-    const asesoriaData = require.body;
-   asesoriasSchema.insertMany(asesoriaData)
+router.post('/seguimientoMany',(require, response) => {
+    const seguimientoData = require.body;
+   seguimientoSchema.insertMany(seguimientoData)
     .then((data) => response.json(data))
     .catch((error)=>response.json({ message: error}))
 });
@@ -37,9 +37,9 @@ router.post('/asesoriasMany',(require, response) => {
 
 //traer por id
 
-router.get('/asesorias/:id', (require, response) => {
+router.get('/seguimiento/:id', (require, response) => {
     const { id } = require.params;
-    asesoriasSchema.findById(id)
+    seguimientoSchema.findById(id)
         .then((data) => response.json(data))
         .catch((error) => response.json({ message: error }))
 });
@@ -48,19 +48,19 @@ router.get('/asesorias/:id', (require, response) => {
 
 // Actualizar por id
 
-router.put('/asesorias/:id',(require, response) =>{
+router.put('/seguimiento/:id',(require, response) =>{
     const {id} = require.params;
-    const {nombre, descripcion} = require.body;
-    asesoriasSchema.updateOne({_id: id}, {$set:{nombre, descripcion}})
+    const {usuario, servicio_contratado, avance, planear, hacer, verificar, actuar} = require.body;
+    seguimientoSchema.updateOne({_id: id}, {$set:{usuario, servicio_contratado, avance, planear, hacer, verificar, actuar}})
     .then((data) => response.json(data))
     .catch((error)=> response.json({ message: error }))
 });
 
 
-//Eliminar usuario
-router.delete('/asesorias/:id',(require, response) =>{
+//Eliminar 
+router.delete('/seguimiento/:id',(require, response) =>{
     const {id} = require.params;
-    asesoriasSchema.deleteOne({_id: id})
+    seguimientoSchema.deleteOne({_id: id})
     .then((data) => response.json(data))
     .catch((error)=> response.json({ message: error }))
 });
