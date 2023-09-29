@@ -5,8 +5,10 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-// import { NgxChartsModule } from '@swimlane/ngx-charts';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -20,9 +22,13 @@ import { FooterComponent } from './components/body/footer/footer.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
 import { InicioPanelComponent } from './components/inicio-panel/inicio-panel.component';
 import { SeguimientoComponent } from './components/inicio-panel/seguimiento/seguimiento.component';
-import { RecursosComponent } from './components/inicio-panel/recursos/recursos.component';
 import { BeneficiosComponent } from './components/inicio-panel/beneficios/beneficios.component';
 import { PerfilComponent } from './components/inicio-panel/perfil/perfil.component';
+import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
+import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
+import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
+
+
 
 
 @NgModule({
@@ -38,9 +44,11 @@ import { PerfilComponent } from './components/inicio-panel/perfil/perfil.compone
     ContactanosComponent,
     InicioPanelComponent,
     SeguimientoComponent,
-    RecursosComponent,
     BeneficiosComponent,
     PerfilComponent,
+    GuiasComponent,
+    LudicasComponent,
+    NormaComponent,
     
   
   ],
@@ -50,8 +58,9 @@ import { PerfilComponent } from './components/inicio-panel/perfil/perfil.compone
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule,
-    // NgxChartsModule,
-    // BrowserAnimationsModule
+    YouTubePlayerModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
     
 
   ],

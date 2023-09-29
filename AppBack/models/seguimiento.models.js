@@ -9,29 +9,24 @@ const seguimientoSchema = mongoose.Schema(
             ref:'usuarios',
             required: true
         },
-        servicio_contratado:{
-            type:[mongoose.Schema.Types.ObjectId],
-            ref:'servicios',
-            require: true
-        },
         avance:{
-            type: String,
+            type: Number,
             require: true
         },
         planear:{
-            type: String,
+            type: Number,
             require: true
         },
         hacer:{
-            type: String,
+            type: Number,
             require: true
         },
         verificar:{
-            type: String,
+            type: Number,
             require: true
         },
         actuar:{
-            type: String,
+            type: Number,
             require: true
         },
 
@@ -43,3 +38,10 @@ const seguimientoSchema = mongoose.Schema(
 
 
 export default mongoose.model('seguimientos', seguimientoSchema);
+
+
+// servicio_contratado:{
+//     type:[mongoose.Schema.Types.ObjectId],
+//     ref:'servicios',
+//     require: true
+// },

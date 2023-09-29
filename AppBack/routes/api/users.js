@@ -136,17 +136,21 @@ router.post('/login', async (require, response) => {
 
     response.json({
         success: 'Has ingresado con éxito',
-        token: createToken(userSchema)
+        token: createToken(user)
     });
 });
 
+
 //TOKEN
-function createToken(userSchema) {
+function createToken(user) {
     const payload = {
-        user_id: userSchema._id,
-        user_role: userSchema.user_role
+        user_id: user._id,
+        user_role: user.role
     }
-    return jwt.sign(payload, 'Mi primer Token')
+
+    console.log(payload)
+
+    return jwt.sign(payload, 'Hola mundo mi primer token')
 }
 
 

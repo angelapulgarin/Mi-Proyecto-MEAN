@@ -1,24 +1,80 @@
-import  jwt  from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 
-const checkToken = (require, response, next) => {
-
-    console.log("Estas en el middleware");
-    if(!require.headers['autorizado']){
-        return response.json({error: 'Incluye la cabecera y el token'})
+const checkToken = (req, res, next) => {
+    if (!req.headers['authorization']) {
+        return res.json({
+            error: 'Falta cabecera y token'
+        });
     }
 
-    const token = require.headers['autorizado']
+    let token = ""
+    let authToken = req.headers['authorization']
+    if (authToken.includes("Bearer")) {
+        token = req.headers['authorization'].split(' ')[1];
+    } else {
+        token = req.headers['authorization']
+    }
 
     try {
-
-    const payload = jwt.verify(token,'Mi primer Token')} catch(error) {
-        return response.json({error:"verifica el token"})
+        const decoded = jwt.verify(token, 'Hola mundo mi primer token');
+        req.user = decoded;
+        next();
+    } catch (error) {
+        return res.json({ error: 'Token inválido' });
     }
+};
 
-
-    next();
-
-}
 
 
 export default checkToken;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import jwt from "jsonwebtoken";
+
+// const checkToken = (require, response, next) => {
+
+//     console.log("Estas en el middleware");
+//     if (!require.headers['autorizado']) {
+//         return response.json({ error: 'Incluye la cabecera y el token' })
+//     }
+
+//     const token = require.headers['autorizado']
+
+//     try {
+//         const decoded = jwt.verify(token, 'Mi primer Token');
+//         require.user = decoded;
+//         next();
+//         console.log(decoded);
+//     } catch (error) {
+//         return response.json({ error: 'Token inválido' });
+//     }
+
+    
+
+// }
+
+
+// export default checkToken;

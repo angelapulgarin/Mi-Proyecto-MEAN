@@ -1,0 +1,191 @@
+h4 {
+    color: #65b24a;
+    font-weight: bold;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    
+ }
+
+ 
+.contenedor-cards {
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  
+  .card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8, .card9 {
+
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+  
+    box-sizing: border-box;
+    width: 25%;
+    height: 250px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    margin: 3%;
+  }
+  
+  .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+  }
+  
+  .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #008bf8;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    text-transform: none;
+  }
+
+  
+  
+  .text-body {
+    color: white !important;
+    
+  }
+  
+  /*Text*/
+  .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    /* background-color: #12131318;
+    border-radius: 10px;
+    background-color: #224b9d8b; */
+  }
+  
+  /*Hover*/
+  .card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover, .card7:hover, .card8:hover, .card9:hover {
+    border-color: #224b9d;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+  }
+  
+  .card1:hover .card-button, .card2:hover .card-button, .card3:hover .card-button, .card4:hover .card-button, .card5:hover .card-button, .card6:hover .card-button, .card7:hover .card-button, .card8:hover .card-button, .card9:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
+  .card1 {
+    background-image: url(../../../../../assets/imagens/servicios/diseno3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+
+  
+.card2 {
+
+    background-image: url(../../../../../assets/imagens/servicios/emergencias.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  
+  
+  .card3 {
+    
+    background-image: url(../../../../../assets/imagens/norma/salud.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  
+  .card4 {
+
+    background-image: url(../../../../../assets/imagens/norma/acoso.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+  }
+  
+  
+  
+  .card5 {
+
+    background-image: url(../../../../../assets/imagens/norma/reporte.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  
+  .card6 {
+   
+    background-image: url(../../../../../assets/imagens/norma/asbesto.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  
+  .card7 {
+    
+    background-image: url(../../../../../assets/imagens/norma/psico.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  
+  .card8 {
+    
+    background-image: url(../../../../../assets/imagens/norma/decreto.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .card9 {
+   
+    background-image: url(../../../../../assets/imagens/norma/resol.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

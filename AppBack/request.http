@@ -236,77 +236,32 @@ GET http://localhost:9000/api/servicios HTTP/1.1
 #####
 POST http://localhost:9000/api/seguimiento HTTP/1.1
 Content-Type: application/json
-autorizado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTU2MDA0NjZ9.u8ZJ9t0unrAVnXps6ldGDGoeM29dC7kJQvXNF69xtHw
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhhNjNjNzMzMzFkNmUxZTZlIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg3MTQ5Nn0.fdmIB_cv_Y3SmxsxtZEqPceTKI40I2rC5eiRnaHt4RI
+
 
 
     {
-        "usuario": "6510f329a63c73331d6e1e6c",
-        "servicio_contratado": [
-            "6510b44ad1c2d1c81dcd6bbc",
-            "6510b44ad1c2d1c81dcd6bbe",
-            "6510b44ad1c2d1c81dcd6bc2",
-            "6510b44ad1c2d1c81dcd6bc5",
-            "6510b44ad1c2d1c81dcd6bc4"
-            ],
-        "avance":"Avance general 60%",
-        "planear":"20%",
-        "hacer": "20%",
-        "verificar": "10%",
-        "actuar": "10%"
+        "usuario": "6510f348a63c73331d6e1e6e",
+        "avance": 70,
+        "planear": 20,
+        "hacer": 20,
+        "verificar": 30,
+        "actuar": 10
         
     }
 
 
 #####
-POST http://localhost:9000/api/seguimientoMany HTTP/1.1
-Content-Type: application/json
-autorizado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTU2MDA0NjZ9.u8ZJ9t0unrAVnXps6ldGDGoeM29dC7kJQvXNF69xtHw
-
-//empresa1
-    {
-        "usuario": "6510e6b70cdeba5469eb2974",
-        "servicio_contratado": [
-            "6510b44ad1c2d1c81dcd6bbc",
-            "6510b44ad1c2d1c81dcd6bbe",
-            "6510b44ad1c2d1c81dcd6bc2",
-            "6510b44ad1c2d1c81dcd6bc5",
-            "6510b44ad1c2d1c81dcd6bc4"
-            ],
-        "avance":"Avance general 80%",
-        "planear":"10%",
-        "hacer": "40%",
-        "verificar": "20%",
-        "actuar": "10%"
-        
-    },
-    //empresa2
-    {
-        "usuario": "6510e6e80cdeba5469eb2976",
-        "servicio_contratado": [
-            "6510b44ad1c2d1c81dcd6bbc",
-            "6510b44ad1c2d1c81dcd6bbe",
-            "6510b44ad1c2d1c81dcd6bc2"
-            ],
-        "avance":"Avance general 60%",
-        "planear":"20%",
-        "hacer": "20%",
-        "verificar": "10%",
-        "actuar": "10%"
-        
-    },
-
-
-
-
-
+DELETE http://localhost:9000/api/seguimiento/6514dd4ae41d4e3707714166 HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhhNjNjNzMzMzFkNmUxZTZlIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg3MTQ5Nn0.fdmIB_cv_Y3SmxsxtZEqPceTKI40I2rC5eiRnaHt4RI
 
 
 
 
 #####
 GET http://localhost:9000/api/seguimiento HTTP/1.1
-autorizado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTU1OTgxNDZ9.EaN02TujeGR5aldgNOH_VMuLvNLmIg7Nc7BShBp83yE
-
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhhNjNjNzMzMzFkNmUxZTZlIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg3MTQ5Nn0.fdmIB_cv_Y3SmxsxtZEqPceTKI40I2rC5eiRnaHt4RI
 
 
 
@@ -343,6 +298,6 @@ Content-Type: application/json
 
 
 {
-    "email": "correoprueba2@gmail.com",
-    "password": "pruebac12324"
+    "email": "prueba2@gmail.com",
+    "password": "prueba2"
 }

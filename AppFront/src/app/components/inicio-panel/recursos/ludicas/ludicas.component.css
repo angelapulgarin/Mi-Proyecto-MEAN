@@ -1,0 +1,60 @@
+h4 {
+    color: #65b24a;
+    font-weight: bold;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    
+ }
+
+ hr {
+    color: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
+    height: 2px;
+
+   margin: 4%;
+}
+
+.contenedor-videos {
+    margin-left: 5%;
+    display: flex;
+}
+
+.video1{
+    margin:2%;    
+    
+}
+
+
+
+.contenedor-videos2 {
+    margin-left: 0 auto;
+    
+}
+
+.video2{
+    margin:2%; 
+    margin-left: 7%;  
+    margin-bottom: 4%;
+    width: 80%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    height: 100%;
+    position: relative;
+
+}
+
+
+.contenedor-texto{
+    margin-left: 4%;
+ 
+}
+
+.titulos-videos{
+    font-weight: bold;
+    color: #224b9d;
+    margin-bottom: 5%;
+    
+}
+

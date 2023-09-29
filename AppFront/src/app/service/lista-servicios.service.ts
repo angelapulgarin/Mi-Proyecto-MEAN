@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +15,7 @@ export class ListaServiciosService {
   
   headers() {
     return {
-      headers: new HttpHeaders({ 'autorizado': localStorage.getItem('user_token')! })
+      headers: new HttpHeaders({ 'authorization': localStorage.getItem('user_token')! })
     }
   }
 
@@ -24,6 +25,13 @@ export class ListaServiciosService {
     return firstValueFrom(
       this.httpClient.get<any[]>('http://localhost:9000/api/seguimiento', this.headers()));
   }
+
+   
+
+
+  
+
+
 
 
 

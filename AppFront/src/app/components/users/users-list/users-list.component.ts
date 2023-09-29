@@ -9,17 +9,22 @@ import { inject } from '@angular/core';
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.css']
 })
+
+
 export class UsersListComponent {
 
   arrUsers = signal<any[]>([])
 
+
   UsersService = inject(UsersService);
 
- async ngOnInit (){
 
-   const user = await this.UsersService.getAll();
-   this.arrUsers.set(user);
-  //  console.table(user);
+  
+  async ngOnInit() {
+
+    const user = await this.UsersService.getAll();
+    this.arrUsers.set(user);
+    //  console.table(user);
   }
 
 }
