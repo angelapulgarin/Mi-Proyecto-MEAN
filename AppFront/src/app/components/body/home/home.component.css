@@ -1,11 +1,12 @@
-
+/* Seccion 1 titulo, parrafo e imagen de fondo */
 
 .inicio1 {
   background-image: url(../../../../assets/imagens/titulo1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  height: 60vh;
-  max-height: 100%;
+  height: 400px;
      
 }
 
@@ -25,25 +26,38 @@
   padding-left: 5%;
   padding-bottom: 1%;
   color: white;
-  max-width: 60%; 
+  width: 60%; 
   
   
 }
 
 
-
-.imgslide {
-  max-height: 70vh;
-  object-fit: cover;
-  min-height: 60%;
-  
-
-}
-
-.s1, .s2 , .s3 {
-    background-color: rgba(0, 0, 0, 0.233);
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 24px;
+    padding-top: 4%;
     
+  }
+
+  .p1titulo {
+    font-size: 16px;
+    width: 90%;
+
+  }
+
+  .inicio1 {
+    
+    height: 200px;
+      
+       
+  }
+
+
 }
+
+
+
+/* Sección 2, parrafo sobre nosotros */
 
 
 .sobre_nosotros {
@@ -59,6 +73,22 @@
   text-align: center;
 }
 
+
+@media (max-width: 768px) {
+  .sobre_nosotros {
+    font-size: 18px;
+    padding: 20px;
+    
+  }
+
+  
+}
+
+
+
+/* Sección 3, Nuestro Objetivio */
+
+
 .titObjetivo {
   color: #224b9d;
   font-weight: bold;
@@ -67,48 +97,126 @@
 }
 
 
+.contenedor-objetivo {
 
-.objetivo {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  margin-left: 10%;
-  margin-right: 4%;
-  margin-bottom: 5%;
+  margin: 8%;
+  margin-top: 4%;
 
 }
 
 
-.card-text {
+.contenedor-imagen {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 300px;
+  box-sizing: border-box;
+  background-image: url(../../../../assets/imagens/proposito.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+
+  
+}
+
+.contendero-texto{
+  width: 50%;
+  padding: 2%;
+  margin: 3% ;
+  max-height: 100%; 
   text-align: center;
-  vertical-align: middle;
-  margin-left: 5%;
-  margin-right: 5%;
+  align-items: center;
+  font-weight: bold;
+  color: #65b24a;
+
+ 
+}
 
 
 
+@media (max-width: 768px) {
+  .titObjetivo {
+    font-size: 24px;
+    margin-top: 5%
+    
+    
+  }
 
+  .contenedor-objetivo{
+    display: flex;
+    flex-direction: column;
+  }
 
+  .contenedor-imagen{
+    width: 100%;
+    height: 200px;
+    margin-top: 10%;
+  }
+
+  .contendero-texto{
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+    margin-top: 7%;
+  }
 
 }
 
-.card-body {
-  padding: 3%;
-  padding-left: 6%;
-  padding-right: 6%;
 
+
+/* Sección 4, slides */
+
+
+.imgslide {
+  max-height: 70vh;
+  object-fit: cover;
+  min-height: 60%;
 
 }
+
+.s1, .s2 , .s3 {
+    background-color: rgba(0, 0, 0, 0.233);
+    
+}
+
+
+
+.carousel-inner img {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  max-height: 75vh; /* Establece la altura deseada para todas las diapositivas */
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio sin deformarla */
+}
+
+
+
+.textSlide{
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.173);
+  padding: 2%;
+  border-radius: 7px;
+}
+
+
+
+
+/* Sección 5, Asesoria */
+
+
 
 
 .tituloAsesoria {
   color: #224b9d;
   font-weight: bold;
   text-align: center;
-  /* padding-left: 8%; */
   margin-bottom: 2%;
-  /* width: 45%; */
   margin-top: 5%
 }
 
@@ -124,20 +232,40 @@
   font-size: 20px;
   font-weight: bold;
 
+}
 
 
+@media (max-width: 768px) {
+  .tituloAsesoria {
+    font-size: 24px;
+    margin: 8%;
+    margin-bottom: 4%;   
+  }
+
+  .contenedorAsesoria{
+    font-size: 17px;
+    padding: 10px;
+  }
 
 }
+
+
+
+
+
+
+
+
+
 
 .contenedorTabla {
   text-align: center;
   margin: 8%;
-  margin-top: 1%;
+  margin-top: 5%;
   margin-bottom: 10%;
   padding: 3%;
   padding-top: 1%;
   padding-bottom: 2%;
-
 
 
 }
@@ -147,12 +275,14 @@
   text-align: center;
   vertical-align: center;
   height: 30%;
+  
 
 }
 
 .card-title {
   color: #224b9d;
   font-weight: bold;
+  margin-top: 8%;
 }
 
 
@@ -161,5 +291,10 @@
   padding-left: 6%;
   padding-right: 6%;
   background-color: rgba(255, 255, 255, 0.075);
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
 }
 
+.card-text{
+  margin-top: 8%;
+  margin-bottom: 5%;
+}

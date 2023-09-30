@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { UsersService } from "src/app/service/users.service";
+import { inject } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-perfil',
@@ -7,4 +11,25 @@ import { Component } from '@angular/core';
 })
 export class PerfilComponent {
 
+  UsersService = inject(UsersService);
+
+  arrUsers: any[] = [];
+
+
+  
+
+
+  
+  async ngOnInit() {
+
+    const user = await this.UsersService.getAll();
+    this.arrUsers = user;
+    //  console.table(user);
+  }
+
 }
+
+
+
+
+

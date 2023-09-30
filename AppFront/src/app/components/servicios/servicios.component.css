@@ -1,3 +1,6 @@
+/* Sección 1, fondo */
+
+
 .tituloServicios,
 .tituloInhouse {
   color: #224b9d;
@@ -6,11 +9,11 @@
   margin: 2%;
   margin-top: 7%;
   margin-bottom: 5%;
-  
+
 }
 
 .imgfondo {
-  background-image: url(https://www.eafit.edu.co/proyecto50/proyectos/PublishingImages/Paginas/salud-y-seguridad-en-el-trabajo/SGSST-10.png);
+  background-image: url(../../../assets/imagens/servicios/fondo.png);
   background-repeat: no-repeat;
   width: 100%;
   height: 20rem;
@@ -22,8 +25,26 @@
 }
 
 
+@media (max-width: 768px) {
+
+  .tituloServicios,
+  .tituloInhouse {
+    font-size: 25px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .imgfondo {
+    width: 100%;
+    height: 200px;
+
+  }
+}
 
 
+
+
+/* Sección 2, cards */
 
 .contenedor-cards {
   display: flex;
@@ -31,8 +52,15 @@
 }
 
 
-
-.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8, .card9 {
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8,
+.card9 {
 
   border-radius: 20px;
   background: #f5f5f5;
@@ -101,16 +129,77 @@
 }
 
 /*Hover*/
-.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover, .card7:hover, .card8:hover, .card9:hover {
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover,
+.card9:hover {
   border-color: #224b9d;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
   transform: scale(1.05);
 }
 
-.card1:hover .card-button, .card2:hover .card-button, .card3:hover .card-button, .card4:hover .card-button, .card5:hover .card-button, .card6:hover .card-button, .card7:hover .card-button, .card8:hover .card-button, .card9:hover .card-button {
+.card1:hover .card-button,
+.card2:hover .card-button,
+.card3:hover .card-button,
+.card4:hover .card-button,
+.card5:hover .card-button,
+.card6:hover .card-button,
+.card7:hover .card-button,
+.card8:hover .card-button,
+.card9:hover .card-button {
   transform: translate(-50%, 50%);
   opacity: 1;
 }
+
+
+
+
+@media (max-width: 768px) {
+  .contenedor-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 7%;
+    /* Establece el flujo de columna */
+
+
+  }
+
+  .contenedor-cards .card1,
+  .contenedor-cards .card2,
+  .contenedor-cards .card3,
+  .contenedor-cards .card4,
+  .contenedor-cards .card5,
+  .contenedor-cards .card6,
+  .contenedor-cards .card7,
+  .contenedor-cards .card8,
+  .contenedor-cards .card9 {
+    width: 70%;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .text-title {
+    font-size: 20px;
+
+
+  }
+
+
+
+
+}
+
+
+
+
 
 
 
@@ -135,6 +224,8 @@
   background-position: center;
 
 }
+
+
 
 
 
@@ -239,7 +330,7 @@
   margin-left: 4%;
   margin-right: 4%;
   margin-bottom: 10%;
-  
+
 
 }
 
@@ -253,8 +344,43 @@
 
 }
 
-.card{
-  margin:2%;
+.card {
+  margin: 2%;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
+
+
+@media (max-width: 768px) {
+  .text-inhouse {
+    display: none;
+
+  }
+
+  .text-inhouseMovil::before {
+
+    content: " Con nuestros servicios inhouse de SST, puedes mantener un entorno laboral seguro y saludable de manera eficiente y personalizada.";
+    color: aliceblue;
+    margin: 5%; 
+    padding-top: 5px;
+    padding-bottom: 5%;
+    color: #65b24a;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .inhouse-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 10%;
+  }
+
+
+}
