@@ -1,38 +1,89 @@
+<section class="contenedor-general">
 
 
-<section class="contenedor">
+    <form id="my-form" [formGroup]="formulario" (ngSubmit)="onSubmit()" class="form card">
 
-    
-    <form class="formulario" [formGroup]="formulario" (ngSubmit)="onSubmit()">
-        <h3>Registrate</h3>
-        <section class="mb-3">
-            <label>Nombre de la empresa:</label>
-            <input type="text" class="form-control" formControlName="nombreEmpresa">
+        <div class="card_header">
+            <h1 class="form_heading">Registrate</h1>
+        </div>
+
+
+        <section class="flexInput">
+            <div class="field-izquierda">
+                <label>Nombre de la empresa:</label>
+                <input class="input" type="text" formControlName="nombreEmpresa"
+                    placeholder="Escribe el nombre de la empresa">
+            </div>
+
+
+            <div class="field-derecha">
+                <label>Nit:</label>
+                <input class="input" type="text" formControlName="nit" placeholder="Escribe el Nit">
+            </div>
         </section>
-        <section class="mb-3">
-            <label>Nit:</label>
-            <input type="text" class="form-control" formControlName="nit">
+
+
+        <section class="flexInput">
+            <div class="field-izquierda">
+                <label>Número de Empleados:</label>
+                <input class="input" type="number" formControlName="numeroEmpleados" placeholder="Número de empleados">
+            </div>
+
+            <div class="field-derecha">
+                <label>Representante Legal:</label>
+                <input class="input" type="text" formControlName="representanteLegal"
+                    placeholder="Escribe el nombre del representante legal">
+            </div>
         </section>
-        <section class="mb-3">
-            <label>Número de Empleados:</label>
-            <input type="number" class="form-control" formControlName="numeroEmpleados">
-        </section>
-        <section class="mb-3">
-            <label>Representante Legal:</label>
-            <input type="text" class="form-control" formControlName="representanteLegal">
-        </section>
-        <section class="mb-3">
+
+        <div class="field">
             <label>Actividad Economica:</label>
-            <input type="text" class="form-control" formControlName="actividadEconomica">
+            <input class="input-actEco" type="text" formControlName="actividadEconomica"
+                placeholder="Escribe la actividad economica.">
+        </div>
+
+
+
+        <section class="flexInput">
+            <div class="field-izquierda">
+                <label>Correo electrónico:</label>
+                <input class="input" type="email" formControlName="email" placeholder="Escribe el email">
+            </div>
+
+            <div class="field-derecha">
+                <label>Contraseña:</label>
+                <input class="input" type="password" formControlName="password" placeholder="Escribe una contraseña">
+            </div>
         </section>
-        <section class="mb-3">
-            <label>Email</label>
-            <input type="email" class="form-control" formControlName="email">
-        </section>
-        <section class="mb-3">
-            <label>Password</label>
-            <input type="password" class="form-control" formControlName="password">
-        </section>
-        <input class="boton" type="submit" value="Enviar" >
+
+
+
+
+        <div class="field-button">
+            <button id="my-form-button" type="submit" class="button">Enviar</button>
+        </div>
+        <p id="my-form-status"></p>
+
+
     </form>
+
+
+    <section class="contenedor-text">
+
+        <h1 class="titulo-text">¡Regístrate con nosotros y obtén acceso a nuestros recursos exclusivos!</h1>
+
+        <section class="contenedor-imagen">
+
+            
+
+        </section>
+    </section>
+
+
+
+
+
+
+
+
 </section>

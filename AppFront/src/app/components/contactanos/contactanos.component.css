@@ -1,251 +1,363 @@
+/* Seccion 1, titulo y fondo */
 
 .contenedorimg {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0;
 }
 
 .imgContact {
-    background-image: url(https://www.justfoia.com/wp-content/uploads/2021/06/2021-contact-us-hero-banner-bg-1024x512.jpg);
-    width: 100%;
-    height: 20rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: left; /* Centra el contenido horizontalmente */
+  background-image: url(https://www.justfoia.com/wp-content/uploads/2021/06/2021-contact-us-hero-banner-bg-1024x512.jpg);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 
 .titulo {
-    font-size: 60px;
-    font-weight: bold;
-    color: #65b24a;
-    text-align: left;
-    margin: 0;
-    padding-left: 7%;
+  font-size: 60px;
+  font-weight: bold;
+  color: #65b24a;
+  text-align: left;
+  margin: 0;
+  padding-left: 7%;
 }
 
 
 
+@media (max-width: 768px) {
+  .imgContact {
+    height: 180px;
 
+
+  }
+
+  .titulo {
+    font-size: 30px;
+    width: 60%;
+
+  }
+
+}
+
+
+
+/* Sección 2, formulario */
 
 .contenedor-general {
-    display: flex;
-    justify-content: center;
-    margin: 5%;
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.card {
+  width: 40%;
+  height: 100%;
+  background: #F4F6FB;
+  border: 1px solid white;
+  box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
+}
+
+.form {
+  padding: 30px;
+  padding-bottom: 20px;
+}
+
+.card_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.contenedor-text {
-    width: 50%;
-    padding-left: 8%;
-    
+
+.form_heading {
+  padding-bottom: 20px;
+  color: #224b9d;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.field {
+  padding-bottom: 10px;
+}
+
+.input {
+  border-radius: 5px;
+  background-color: #e9e9f7;
+  padding: 5px;
+  width: 100%;
+  color: #7a7ab3;
+  border: 1px solid #dadaf7
+}
+
+.input:focus-visible {
+  outline: 1px solid #aeaed6;
+}
+
+.input::placeholder {
+  color: #bcbcdf;
+  font-size: 13px;
+}
+
+label {
+  color: #828487;
+  font-size: 17px;
+  display: block;
+  padding-bottom: 4px;
+}
+
+
+.field-button {
+
+  display: flex;
+  justify-content: center;
+}
+
+
+button {
+  background-color: #224b9d;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 7px 12px;
+  height: auto;
+  width: 20%;
+  font-weight: 500;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #5f9c8b;
+}
+
+
+@media (max-width: 768px) {
+
+  .contenedor-general {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: 5%;
+  }
+
+
+  .form {
+    width: 100%;
+    text-align: left;
+    /* Alinear el contenido del formulario a la izquierda */
+    padding: 20px;
+  }
+
+  #my-form {
+    width: 100%;
+    margin-top: 9%;
+  }
+
+  .form_heading {
+    font-size: 25px !important;
+  }
+
+  button {
+    font-size: 15px;
+    width: 40% !important;
+  }
+
+  .field-button {
+    margin-top: 5%;
+  }
+
 }
 
 
 
+
+
+
+/* Sección 3, Texto */
+
+
+.contenedor-text {
+  width: 50%;
+  padding-left: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .titulo-text {
-    padding-bottom: 5%;
-    color: #65b24a;
-    font-weight: bold;
-    text-align: center;
-    
+  padding-bottom: 5%;
+  color: #65b24a;
+  font-weight: bold;
+  text-align: center;
+
 }
 
 .parrafo {
-    text-align: center;
-    padding-top: 5%;
-    color: #224b9d;
-    font-weight: bold;
+  text-align: center;
+  padding-top: 5%;
+  color: #224b9d;
+  font-weight: bold;
 }
 
 
+@media (max-width: 768px) {
 
-
-.card {
-    width: 40%;
-    height: 100%;
-    background: #F4F6FB;
-    border: 1px solid white;
-    box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
-    -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
-    -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
-  }
-  
-  .form {
-    padding: 30px;
-    padding-bottom: 20px;
-  }
-  
-  .card_header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-
-  
-  .form_heading {
-    padding-bottom: 20px;
-    font-size: 21px;
-    color: #224b9d;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .field {
-    padding-bottom: 10px;
-  }
-  
-  .input {
-    border-radius: 5px;
-    background-color: #e9e9f7;
-    padding: 5px;
+  .contenedor-text {
     width: 100%;
-    color: #7a7ab3;
-    border: 1px solid #dadaf7
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
-  
-  .input:focus-visible {
-    outline: 1px solid #aeaed6;
-  }
-  
-  .input::placeholder {
-    color: #bcbcdf;
-    font-size: 13px;
-  }
-  
-  label {
-    color: #828487;
-    font-size: 17px;
-    display: block;
-    padding-bottom: 4px;
-  }
-  
 
-.field-button{
-   
-    display: flex;
-    justify-content: center;
+  .titulo-text {
+    font-size: 25px;
+  }
+
+  .parrafo{
+    font-size: 15px;
+  }
 }
 
 
-  button {
-    background-color: #224b9d;
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 7px 12px;
-    height: auto;
-    width: 20%;
-    font-weight: 500;
-    color: white;
-    border: none;
+
+
+
+/* Sección 4 wp email */
+
+
+.numeros,
+.email {
+  margin: 2%;
+  display: flex;
+  justify-content: justify;
+  align-items: center;
+
+}
+
+.wp,
+.text-email {
+  padding-left: 5%;
+  margin: 0;
+
+}
+
+.imgredes {
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+
+  .imgredes {
+    width: 20px;
   }
-  
-  button:hover {
-    background-color: #5f9c8b;
-  }
-
-
-.numeros, .email{
-    margin: 2%;
-    display:flex ;
-    justify-content: justify;
-    align-items: center;
-    
 }
 
-.wp, .text-email{
-    padding-left: 5%;
-    margin: 0;
-    
-}
 
-.imgredes{
-    width: 30px;
-}
 
+
+
+/* Sección 5 cuadro redes */
 
 .card-redes {
-    width: fit-content;
-    height: fit-content;
-    /* background-color: rgb(238, 238, 238); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(58, 52, 52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
-  
-  /* for all social containers*/
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
   .socialContainer {
-    width: 52px;
-    height: 52px;
-    background-color: rgb(58, 52, 52);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition-duration: .3s;
+    width: 38px;
+    height: 38px;
   }
-  /* instagram*/
-  .containerOne:hover {
-    background-color: #d62976;
-    transition-duration: .3s;
+
+  .card-redes {
+   margin-top: 5%;
   }
-  /* twitter*/
-  .containerTwo:hover {
-    background-color: #00acee;
-    transition-duration: .3s;
-  }
-  /* linkdin*/
-  .containerThree:hover {
-    background-color: #0072b1;
-    transition-duration: .3s;
-  }
-  /* Whatsapp*/
-  .containerFour:hover {
-    background-color: #128C7E;
-    transition-duration: .3s;
-  }
-  
-  .socialContainer:active {
-    transform: scale(0.9);
-    transition-duration: .3s;
-  }
-  
-  .socialSvg {
-    width: 17px;
-  }
-  
-  .socialSvg path {
-    fill: rgb(255, 255, 255);
-  }
-  
-  .socialContainer:hover .socialSvg {
-    animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  
+}
