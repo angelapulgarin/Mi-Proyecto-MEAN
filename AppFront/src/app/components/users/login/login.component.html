@@ -1,16 +1,40 @@
-<section class="contenedor">
+<section class="contenedor-general">
 
-    <form class="formulario" [formGroup]="formulario" (ngSubmit)="onSubmit()">
-        <h3>Iniciar sesión</h3>
-        <section class="mb-3">
-            <label>Email</label>
-            <input type="email" class="form-control" formControlName="email">
+    <section class="contenedor-text">
+
+        <h1 class="titulo-text">Bienvenido!</h1>
+
+        <section class="contenedor-imagen">
+
         </section>
-        <section class="mb-3">
-            <label>Password</label>
-            <input type="password" class="form-control" formControlName="password">
+
+    </section>
+
+
+
+
+
+    <form id="my-form" [formGroup]="formulario" (ngSubmit)="onSubmit()"   class="form card" >
+        
+        <div class="card_header">
+            <h1 class="form_heading">Iniciar Sesión</h1>
+        </div>
+
+        <section class="field">
+            <label>Correo electrónico:</label>
+            <input type="email" class="input" formControlName="email" placeholder="Escribe el email">
         </section>
-        <input class="boton" type="submit" value="Ingresar">
+
+        <section class="field">
+            <label>Contraseña:</label>
+            <input type="password" class="input" formControlName="password" placeholder="Escribe la contraseña">
+        </section>
+
+        <div class="field-button">
+            <button id="my-form-button" type="submit" class="button">Ingresar</button>
+        </div>
+
+
     </form>
 
 </section>

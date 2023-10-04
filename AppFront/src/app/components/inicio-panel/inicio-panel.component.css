@@ -8,7 +8,7 @@
 
     font-size: 40pt;
     margin: 5%;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 2%;
     color: #224b9d;
     font-weight: bold;
@@ -40,20 +40,99 @@ hr {
     width: 10%;
     height: 100%;
     margin-top: 3%;
-    /* overflow: hidden;
-    position: relative;
-    text-align: left;
-    border-radius: 0.5rem;
+
+}
+
+
+.menu-desplegable {
+    display: none;
+
+}
+
+
+@media (max-width: 768px) {
+
+    hr {
+        color: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
+        background: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
+        height: 5px;
     
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    background-color: #ffffffea;
+        margin-left: 6%;
+        margin-right: 6%;
+        
+        margin-bottom: 0;
+    
+    }
+
+
+    .contenedor-navbar {
+        display: none;
+    }
+
+    .contendor-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 9%;
+        margin-right: 9%;
+
+        padding: 0;
+
+    }
+
+    .menu-desplegable {
+
+        display: flex;
+        justify-content: center;
+        margin: 4%
+    }
+
+
+    .contenedor-bienvenido {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .bienvenido {
+
+        font-size: 35px;
+
+    }
+
+    .contenedor-general {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 4%;
+    
+    }
+
     
 
-    border-color: white; */
+   
+
+
+
+
+
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .contenedor-componentes {

@@ -3,15 +3,15 @@ h4 {
     font-weight: bold;
     margin-left: 4%;
     margin-bottom: 4%;
-    
- }
 
- hr {
+}
+
+hr {
     color: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
     background: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
     height: 2px;
 
-   margin: 4%;
+    margin: 4%;
 }
 
 .contenedor-videos {
@@ -19,7 +19,20 @@ h4 {
     display: flex;
 }
 
-.video1{
-    margin:2%;    
-    
+.video1 {
+    margin: 2%;
+
+}
+
+
+@media (max-width: 768px) {
+    .contenedor-videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+        margin-bottom: 7%;
+        margin-left: 0
+    }
 }

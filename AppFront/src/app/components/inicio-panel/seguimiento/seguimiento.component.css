@@ -43,3 +43,27 @@
   font-weight: bold;
   color: #224b9d;
 }
+
+
+@media (max-width: 768px) {
+
+  .contenedor-card{
+    margin: 0;
+  }
+
+
+  .card {
+  
+    width: 100%;
+    height: 354px;
+    
+  }
+
+
+
+
+
+
+  }
+
+

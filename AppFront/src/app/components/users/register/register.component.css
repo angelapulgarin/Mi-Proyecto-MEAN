@@ -31,15 +31,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 60%;
     height: 300px;
     box-sizing: border-box;
-    background-image: url(../../../../assets/imagens/registro5.png);
+    background-image: url(../../../../assets/imagens/login3.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 20px;
     position: relative;
+    margin-top: 3%;
 }
 
 
@@ -202,7 +203,6 @@ button:hover {
     .form {
         width: 100%;
         text-align: left;
-        /* Alinear el contenido del formulario a la izquierda */
         padding: 20px;
     }
 
