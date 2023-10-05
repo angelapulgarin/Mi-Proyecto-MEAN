@@ -8,7 +8,7 @@
 
     font-size: 40pt;
     margin: 5%;
-    margin-top: 2%;
+    
     margin-bottom: 2%;
     color: #224b9d;
     font-weight: bold;
@@ -32,6 +32,7 @@ hr {
 .contenedor-general {
 
     display: flex;
+    margin-bottom: 5%;
 
 }
 
@@ -49,19 +50,22 @@ hr {
 
 }
 
+.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+
+
 
 @media (max-width: 768px) {
 
     hr {
-        color: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
-        background: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
+        
+        background: black;
         height: 5px;
-    
         margin-left: 6%;
         margin-right: 6%;
-        
         margin-bottom: 0;
-    
     }
 
 
@@ -73,9 +77,9 @@ hr {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 10%;
         margin-left: 9%;
         margin-right: 9%;
-
         padding: 0;
 
     }
@@ -85,6 +89,11 @@ hr {
         display: flex;
         justify-content: center;
         margin: 4%
+    }
+
+    .botonMenu {
+        background-color:  #263047;
+        
     }
 
 
@@ -98,26 +107,20 @@ hr {
     .bienvenido {
 
         font-size: 35px;
+        
 
     }
 
     .contenedor-general {
         width: 100%;
         margin-top: 5%;
-        margin-bottom: 4%;
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
     
     }
 
-    
-
-   
-
-
-
-
-
-
-
+  
 
 }
 
@@ -167,4 +170,20 @@ hr {
 
 .nav-underline .nav-link:hover {
     border-bottom: 2px solid #65b24a;
+}
+
+
+
+.dropdown-menu{
+    background-color:  #263047;
+    
+}
+
+
+.dropdown-item{
+    color: white;
+}
+
+.dropdown-item.active {
+    background-color: #65b24a;
 }

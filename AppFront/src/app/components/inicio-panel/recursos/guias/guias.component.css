@@ -10,7 +10,6 @@ hr {
     color: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
     background: linear-gradient(to right, #333, rgba(255, 255, 255, 0));
     height: 2px;
-
     margin: 4%;
 }
 
@@ -31,8 +30,25 @@ hr {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        align-items: center;
         gap: 5px;
         margin-bottom: 7%;
-        margin-left: 0
+        margin-left: 0;
+        margin-right: 0;
+        
     }
+
+    .video1 {
+        margin: 2%;
+    }
+
+
+    h4 {
+        text-align: center;
+        
+    }
+
+    
+
+
 }

@@ -189,3 +189,52 @@ h4 {
     background-repeat: no-repeat;
     background-position: center;
   }
+
+
+  
+@media (max-width: 768px) {
+  .contenedor-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 7%;
+    /* Establece el flujo de columna */
+
+
+  }
+
+  .contenedor-cards .card1,
+  .contenedor-cards .card2,
+  .contenedor-cards .card3,
+  .contenedor-cards .card4,
+  .contenedor-cards .card5,
+  .contenedor-cards .card6,
+  .contenedor-cards .card7,
+  .contenedor-cards .card8,
+  .contenedor-cards .card9 {
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .text-title {
+    font-size: 20px;
+  }
+
+  .text-body {
+    font-size: 14px;
+  }
+
+  h4 {
+    
+    margin-left: 0;
+    margin-bottom: 10%;
+    margin-top: 7%;
+    text-align: center;
+    font-size: 22px;
+    
+ }
+
+}

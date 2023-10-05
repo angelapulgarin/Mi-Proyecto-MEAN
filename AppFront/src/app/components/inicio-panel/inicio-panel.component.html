@@ -1,28 +1,54 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #263047">
+  <div class="container-fluid">
+      <a class="navbar-brand " routerLink="/inicio-panel/seguimiento" routerLinkActive="active">A&M Consultores</a>
+
+  </div>
+</nav>
+
 
 <section class="contendor-header">
 
-<section class="contenedor-bienvenido">
+  <section class="contenedor-bienvenido">
 
     <h1 class="bienvenido">Bienvenido</h1>
-    
-
-</section>
-
-<section class="menu-desplegable">
-
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Menu
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-      </div>
 
 
-</section>
+  </section>
+
+  <section class="menu-desplegable">
+
+    <div class="dropdown ">
+      <button class="btn btn-secondary dropdown-toggle  botonMenu" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+        Menu
+      </button>
+      <ul class="dropdown-menu">
+
+        <li>
+          <a class="dropdown-item" routerLink="/inicio-panel/seguimiento" routerLinkActive="active">Seguimiento</a>
+        </li>
+
+        <li>
+          <a class="dropdown-item" routerLink="/inicio-panel/guias" routerLinkActive="active">Guias</a>
+        </li>
+
+        <li><a class="dropdown-item" routerLink="/inicio-panel/actividades-ludicas"
+            routerLinkActive="active">Actividades Ludicas</a>
+        </li>
+
+        <li>
+          <a class="dropdown-item" routerLink="/inicio-panel/normatividad" routerLinkActive="active">Normatividad</a>
+        </li>
+
+        <li><a class="dropdown-item" href="#" (click)="onClickLogout()">Cerrar sesión</a></li>
+
+
+
+
+      </ul>
+    </div>
+
+
+  </section>
 
 </section>
 
@@ -40,55 +66,57 @@
 
 <section class="contenedor-general">
 
-    
 
 
-    <section class="contenedor-navbar">
 
-        
-        <ul class="nav flex-column nav-underline ">
-            <li class="nav-item">
-                <a class="nav-link"  aria-current="page" routerLink="/inicio-panel/seguimiento" routerLinkActive="active">Seguimiento</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link"   routerLink="/inicio-panel/guias" routerLinkActive="active">Guias</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"   routerLink="/inicio-panel/actividades-ludicas" routerLinkActive="active">Actividades Ludicas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"   routerLink="/inicio-panel/normatividad" routerLinkActive="active">Normatividad</a>
-            </li>
-            <!-- <li class="nav-item">
+  <section class="contenedor-navbar">
+
+
+    <ul class="nav flex-column nav-underline ">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" routerLink="/inicio-panel/seguimiento"
+          routerLinkActive="active">Seguimiento</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/inicio-panel/guias" routerLinkActive="active">Guias</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/inicio-panel/actividades-ludicas" routerLinkActive="active">Actividades
+          Ludicas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/inicio-panel/normatividad" routerLinkActive="active">Normatividad</a>
+      </li>
+      <!-- <li class="nav-item">
                 <a class="nav-link"  routerLink="/inicio-panel/beneficios" routerLinkActive="active">Beneficios</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"   routerLink="/inicio-panel/perfil" routerLinkActive="active">Mi perfil</a>
             </li> -->
-            <li class="nav-item">
-                <a class="nav-link"  href="#"  (click)="onClickLogout()"   >Cerrar sesión</a>
-            </li>
-        </ul>
-        
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="onClickLogout()">Cerrar sesión</a>
+      </li>
+    </ul>
 
 
 
 
 
-    </section>
+
+  </section>
 
 
-    
-
-    <section class="contenedor-componentes">
-
-       <router-outlet></router-outlet>
-
-    </section>
 
 
-   
+  <section class="contenedor-componentes">
+
+    <router-outlet></router-outlet>
+
+  </section>
+
+
+
 
 
 
@@ -103,13 +131,3 @@
       </a>
     </div>
   </nav> -->
-
-
-
-
-
-
-  
-
-
-
