@@ -21,22 +21,8 @@ export class ListaServiciosService {
 
 
   traerSeguimientos() {
-
     return firstValueFrom(
       this.httpClient.get<any[]>('http://localhost:9000/api/seguimiento', this.headers()));
   }
-
-   
-
-
-  
-
-
-
-
-
-
-
-
 
 }

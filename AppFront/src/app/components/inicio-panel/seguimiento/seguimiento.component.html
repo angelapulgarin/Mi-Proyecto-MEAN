@@ -1,35 +1,109 @@
 <section class="contendeor-cards">
 
-   
 
-    <div class="card">
-        <div class="card-details">
-            <p class="text-title">Avance del SG-SSST</p>
 
-            <!-- <p *ngFor="let listaServicios of arrServicios">
-                {{listaServicios.avance}}
-               Planear> {{listaServicios.planear}}
-
-            </p> -->
-
-            <ngx-charts-advanced-pie-chart
-                [view]="view"
-                scheme="aqua"
-                [results]="single"
-                [gradient]="gradient"
-                (select)="onSelect($event)"
-                (activate)="onActivate($event)"
-                (deactivate)="onDeactivate($event)" class="grafico"></ngx-charts-advanced-pie-chart>
-
-        </div>
-        
+  <div class="card">
+    <div class="card-details">
+      <p class="text-title">Avance del SG-SSST</p>
     </div>
 
-    
+    <section class="content-general">
+
+      <section class="grafico">
+        <ngx-charts-advanced-pie-chart [view]="view" scheme="aqua" [results]="single" [gradient]="gradient"
+          (select)="onSelect($event)" (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+        </ngx-charts-advanced-pie-chart>
+      </section>
+
+
+
+
+
+
+    </section>
+
+    <section class="tabla">
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th>Valoración</th>
+            <th>Acción</th>
+        
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Si el puntaje obtenido es menor al 60%</td>
+            <td>CRÍTICO</td>
+            <td>
+
+              <ul>
+                <li>
+                  Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento de inmediato.
+                </li>
+                <li>
+                  Enviar a la ARL reporte de avances en el término máximo de tres (3) meses.
+                </li>
+                <li>
+                  Seguimiento anual y plan de visita por parte del Ministerio del Trabajo.
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Si el puntaje obtenido está entre el 60 y 85%</td>
+            <td>MODERADAMENTE ACEPTABLE</td>
+            <td>
+
+              <ul>
+                <li>
+                  Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento.
+                </li>
+                <li>
+                  Enviar a la ARL reporte de avances en el término máximo de tres (6) meses.
+                </li>
+                <li>
+                  Plan de visita por parte del Ministerio del Trabajo.
+                </li>
+              </ul>
+            </td>
+        
+            
+          </tr>
+
+          <tr>
+            <td>Si el puntaje obtenido es mayor al 85%</td>
+            <td>ACEPTABLE</td>
+            <td>
+
+              <ul>
+                <li>
+                  Mantener la calificación y evidencias a disposición del Ministerio del Trabajo, e incluir en el Plan de Anual de Trabajo las mejoras detectadas.
+                </li>
+                
+              </ul>
+            </td>
+        
+            
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+
+    </section>
+
+
+
+  </div>
+
+
 
 </section>
-
-
-
-
-                

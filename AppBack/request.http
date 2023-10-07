@@ -236,19 +236,46 @@ GET http://localhost:9000/api/servicios HTTP/1.1
 #####
 POST http://localhost:9000/api/seguimiento HTTP/1.1
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhhNjNjNzMzMzFkNmUxZTZlIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg3MTQ5Nn0.fdmIB_cv_Y3SmxsxtZEqPceTKI40I2rC5eiRnaHt4RI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYyZjlhNjNjNzMzMzFkNmUxZTZhIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NjU0OTk3NX0.SflsnW06JXt6xOjvdCS2KPRvjby4VVHWeNGl17a84Dc
 
 
 
     {
-        "usuario": "6510f348a63c73331d6e1e6e",
-        "avance": 70,
+        "usuario": "6510f2f9a63c73331d6e1e6a",
+        "avance": 90,
         "planear": 20,
-        "hacer": 20,
-        "verificar": 30,
-        "actuar": 10
+        "hacer": 60,
+        "verificar": 5,
+        "actuar": 5
         
     }
+
+
+
+#####
+GET http://localhost:9000/api/seguimiento HTTP/1.1
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYyZjlhNjNjNzMzMzFkNmUxZTZhIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NjU0OTk3NX0.SflsnW06JXt6xOjvdCS2KPRvjby4VVHWeNGl17a84Dc
+
+
+
+//POST LOGIN
+
+#####
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "email": "arte@gmail.com",
+    "password": "arte1234"
+}
+
+
+
+
+
+
 
 
 #####
@@ -258,10 +285,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhh
 
 
 
-#####
-GET http://localhost:9000/api/seguimiento HTTP/1.1
-Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjUxMGYzNDhhNjNjNzMzMzFkNmUxZTZlIiwidXNlcl9yb2xlIjoicmVndWxhciIsImlhdCI6MTY5NTg3MTQ5Nn0.fdmIB_cv_Y3SmxsxtZEqPceTKI40I2rC5eiRnaHt4RI
 
 
 
@@ -298,6 +321,6 @@ Content-Type: application/json
 
 
 {
-    "email": "prueba2@gmail.com",
-    "password": "prueba2"
+    "email": "arte@gmail.com",
+    "password": "arte1234"
 }

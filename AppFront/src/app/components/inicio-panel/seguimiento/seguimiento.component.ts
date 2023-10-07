@@ -16,22 +16,41 @@ export class SeguimientoComponent {
   constructor(public servicio: ListaServiciosService) { }
 
   arrServicios: any[] = [];
- 
+
+  single: any[] = [];
 
 
-  
   async ngOnInit() {
     const listaServicios = await this.servicio.traerSeguimientos();
     this.arrServicios = listaServicios;
-    
 
+    console.log(listaServicios);
+
+    this.single = [
+      {
+        "name": "Planear",
+        "value": this.arrServicios[0].planear
+      },
+      {
+        "name": "Hacer",
+        "value": this.arrServicios[0].hacer
+      },
+      {
+        "name": "Verificar",
+        "value": this.arrServicios[0].verificar
+      },
+      {
+        "name": "Actuar",
+        "value": this.arrServicios[0].actuar
+      }
+    ];
 
   }
 
 
 
 
-  view: [number, number] = [700, 400];
+  view: [number, number] = [750, 300];
 
   // options
   gradient: boolean = true;
@@ -39,49 +58,30 @@ export class SeguimientoComponent {
   showLabels: boolean = true;
   isDoughnut: boolean = false;
 
-  // colorScheme: {domain: string[];} = {
-  //   domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
-  // };
+ 
 
-
-  single = [
-    {
-      "name": "Germany",
-      "value": 8940000
-    },
-    {
-      "name": "USA",
-      "value": 5000000
-    },
-    {
-      "name": "France",
-      "value": 7200000
-    },
-    {
-      "name": "UK",
-      "value": 6200000
+    onSelect(data: any): void {
+      console.log('Item clicked', JSON.parse(JSON.stringify(data)));
     }
-  ];
+
+    onActivate(data: any): void {
+      console.log('Activate', JSON.parse(JSON.stringify(data)));
+    }
+
+    onDeactivate(data: any): void {
+      console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+    }
+
+  };
 
 
 
-  // constructor() {
-  //   Object.assign(this, { single });
-  // }
 
-  onSelect(data: any): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
 
-  onActivate(data: any): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
-  }
 
-  onDeactivate(data: any): void {
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
 
-};
+
+
 
 
 
