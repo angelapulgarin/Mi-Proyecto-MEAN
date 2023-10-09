@@ -45,6 +45,9 @@ export class SeguimientoComponent {
       }
     ];
 
+
+    
+
   }
 
 
@@ -52,11 +55,18 @@ export class SeguimientoComponent {
 
   view: [number, number] = [750, 300];
 
+  
+
   // options
   gradient: boolean = true;
   showLegend: boolean = true;
   showLabels: boolean = true;
   isDoughnut: boolean = false;
+
+  // colorScheme = {
+    
+  //   domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+  // };
 
  
 
