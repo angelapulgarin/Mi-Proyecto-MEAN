@@ -16,39 +16,56 @@ import { PerfilComponent } from './components/inicio-panel/perfil/perfil.compone
 import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
 import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
 import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
+import { FooterComponent } from './components/body/footer/footer.component';
 
 
 const routes: Routes = [
- 
-  {path: 'users', component: UsersListComponent, canActivate:[loginGuard]},
-  {path: 'servicios', component: ServiciosComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'contactanos', component: ContactanosComponent},
+
+  { path: 'users', component: UsersListComponent, canActivate: [loginGuard] },
+  { path: 'servicios', component: ServiciosComponent },
+
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'contactanos', component: ContactanosComponent },
 
   {
-    path: 'inicio-panel', component: InicioPanelComponent, canActivate:[loginGuard],
+    path: 'inicio-panel', component: InicioPanelComponent, canActivate: [loginGuard],
     children: [
 
-      {path: '', component: SeguimientoComponent, canActivate:[loginGuard]},
-      {path:'seguimiento', component:SeguimientoComponent ,canActivate:[loginGuard] },
-      {path: 'guias', component: GuiasComponent, canActivate:[loginGuard]},
-      {path: 'actividades-ludicas', component: LudicasComponent, canActivate:[loginGuard]},
-      {path: 'normatividad', component: NormaComponent, canActivate:[loginGuard]},
-      {path: 'beneficios', component: BeneficiosComponent, canActivate:[loginGuard]},
-      {path: 'perfil', component: PerfilComponent, canActivate:[loginGuard]},
+      { path: '', component: SeguimientoComponent, canActivate: [loginGuard] },
+      { path: 'seguimiento', component: SeguimientoComponent, canActivate: [loginGuard] },
+      { path: 'guias', component: GuiasComponent, canActivate: [loginGuard] },
+      { path: 'actividades-ludicas', component: LudicasComponent, canActivate: [loginGuard] },
+      { path: 'normatividad', component: NormaComponent, canActivate: [loginGuard] },
+      { path: 'beneficios', component: BeneficiosComponent, canActivate: [loginGuard] },
+      { path: 'perfil', component: PerfilComponent, canActivate: [loginGuard] },
 
     ]
-  
-  
+
+
   },
 
- 
 
-  {path: '', redirectTo: 'home', pathMatch: 'full' },
-  {path: 'home', component: HomeComponent },
-  {path: '**', component: HomeComponent},
-  
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home', component: HomeComponent,
+
+    children: [
+
+      {path: 'footer', component: FooterComponent},
+    ]
+
+
+
+
+  },
+
+
+
+
+  { path: '**', component: HomeComponent },
+
   // {
   //   path: 'users/:id', component:UserDetails
   // }

@@ -11,5 +11,19 @@ export class HeaderComponent {
 
   userService = inject(UsersService)
 
+
+
+  footer() {
+    document.getElementById("footer1")?.scrollIntoView({behavior:"smooth"});
+  }
+
+
+
+
+
+
+
+
+
   
 }
