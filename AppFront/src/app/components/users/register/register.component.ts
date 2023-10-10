@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/service/users.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { UsersService } from 'src/app/service/users.service';
 export class RegisterComponent {
 
   formulario: FormGroup
+
+  router = inject(Router);
 
  
 
@@ -32,5 +35,14 @@ export class RegisterComponent {
     const res = await this.userService.register(this.formulario.value);
     console.log(res)
   }
+
+
+ redirigirLogin() {
+    this.router.navigate(['/login']);
+  }
+
+
+
+
 
 }

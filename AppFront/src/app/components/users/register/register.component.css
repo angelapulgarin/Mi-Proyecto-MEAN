@@ -171,7 +171,7 @@ label {
 }
 
 
-button {
+#my-form-button {
     background-color: #224b9d;
     margin-top: 10px;
     font-size: 14px;
@@ -183,7 +183,7 @@ button {
     border: none;
 }
 
-button:hover {
+#my-form-button:hover {
     background-color: #5f9c8b;
 }
 
@@ -217,7 +217,7 @@ button:hover {
         font-size: 23px !important;
     }
 
-    button {
+    #my-form-button {
         font-size: 15px;
         width: 40% !important;
     }
