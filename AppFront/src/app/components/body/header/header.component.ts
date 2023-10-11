@@ -13,13 +13,30 @@ export class HeaderComponent {
 
 
 
-  footer() {
-    document.getElementById("footer1")?.scrollIntoView({behavior:"smooth"});
-  }
+  home() {
+    document.getElementById("home-inicio")?.scrollIntoView({behavior:"smooth"});
+  };
 
 
+  servicios() {
+    document.getElementById("servicios-inicio")?.scrollIntoView({behavior:"smooth"});
+  };
 
 
+  contactanos(){
+    document.getElementById("contacto-imagen")?.scrollIntoView({behavior:"smooth"});
+  };
+
+
+  // registro(){
+  //   document.getElementById("registro-inicio")?.scrollIntoView({behavior:"smooth"});
+  // };
+
+
+  // login(){
+  //   document.getElementById("login-inicio")?.scrollIntoView({behavior:"smooth"});
+  // };
+  
 
 
 

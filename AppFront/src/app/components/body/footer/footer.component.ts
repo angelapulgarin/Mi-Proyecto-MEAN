@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+
+
+
+  irContactanos() {
+    document.getElementById("contacto-imagen")?.scrollIntoView({behavior:"smooth"});
+  }
+
+
+
+
+
+
+
 }

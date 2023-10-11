@@ -16,7 +16,7 @@ import { PerfilComponent } from './components/inicio-panel/perfil/perfil.compone
 import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
 import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
 import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
-import { FooterComponent } from './components/body/footer/footer.component';
+
 
 
 const routes: Routes = [
@@ -48,22 +48,7 @@ const routes: Routes = [
 
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {
-    path: 'home', component: HomeComponent,
-
-    children: [
-
-      {path: 'footer', component: FooterComponent},
-    ]
-
-
-
-
-  },
-
-
-
-
+  { path: 'home', component: HomeComponent },
   { path: '**', component: HomeComponent },
 
   // {

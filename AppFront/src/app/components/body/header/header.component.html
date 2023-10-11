@@ -1,11 +1,10 @@
 
 
-
 <header *ngIf="!userService.isLogged()">
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark " style="background-color: #263047">
         <div class="container-fluid">
-            <a class="navbar-brand " routerLink="home" routerLinkActive="active">A&M Consultores</a>
+            <div (click)="home()" ><a class="navbar-brand " routerLink="home" routerLinkActive="active"  >A&M Consultores</a></div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,12 +13,11 @@
             
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link"  routerLink="home"
-                        routerLinkActive="active">Inicio</a>
-                    <a class="nav-link" routerLink="servicios" routerLinkActive="active">Nuestros Servicios</a>
-                    <a class="nav-link" routerLink="footer" routerLinkActive="active"  (click)="footer()">Contactanos</a>
-                    <a class="nav-link" routerLink="register" routerLinkActive="active">Regístrate</a>
-                    <a class="nav-link " routerLink="login" routerLinkActive="active">Iniciar Sesión</a>
+                    <div (click)="home()"><a class="nav-link"  routerLink="home" routerLinkActive="active">Inicio</a></div>
+                    <div (click)="servicios()"><a class="nav-link" routerLink="servicios" routerLinkActive="active">Nuestros Servicios</a></div>
+                    <div (click)="contactanos()"><a class="nav-link" routerLink="contactanos" routerLinkActive="active" >Contactanos</a></div>
+                    <div ><a class="nav-link" routerLink="register" routerLinkActive="active">Regístrate</a></div>
+                    <div ><a class="nav-link" routerLink="login" routerLinkActive="active">Iniciar Sesión</a></div>
                 </div>
             </div>
         </div>
@@ -27,9 +25,3 @@
 
 </header>
 
-<!-- <section id="footer">
-
-    <app-footer></app-footer>
-
-</section>
- -->
