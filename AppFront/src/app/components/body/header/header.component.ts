@@ -11,6 +11,65 @@ export class HeaderComponent {
 
 
 
+
+  userService = inject(UsersService)
+
+
+
+  home() {
+    document.getElementById("home-inicio")?.scrollIntoView({block: "nearest", behavior:"smooth"} );
+  };
+
+
+  servicios() {
+    document.getElementById("servicios-inicio")?.scrollIntoView({behavior:"smooth"});
+  };
+
+
+  contactanos(){
+    document.getElementById("contacto-imagen")?.scrollIntoView({behavior:"smooth"});
+  };
+
+
+  // registro(){
+  //   document.getElementById("registro-inicio")?.scrollIntoView({behavior:"smooth"});
+  // };
+
+
+  // login(){
+  //   document.getElementById("login-inicio")?.scrollIntoView({behavior:"smooth"});
+  // };
+  
+
+
+  //ESCONDER NAVBAR
+
+
+  esconderMenu() {
+    let menu: any = document.getElementById("navbarNavAltMarkup");
+    if (menu.classList.contains("show")) {
+      let navbarToggler:any = document.querySelector(".navbar-toggler");
+      navbarToggler.click();
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //MODO OSCURO
+
+
+
+  
   constructor( ) {
 
     /*!
@@ -97,47 +156,6 @@ export class HeaderComponent {
     
       
     }
-
-
-
-
-
-
-
-
-
-
-  userService = inject(UsersService)
-
-
-
-  home() {
-    document.getElementById("home-inicio")?.scrollIntoView({behavior:"smooth"});
-  };
-
-
-  servicios() {
-    document.getElementById("servicios-inicio")?.scrollIntoView({behavior:"smooth"});
-  };
-
-
-  contactanos(){
-    document.getElementById("contacto-imagen")?.scrollIntoView({behavior:"smooth"});
-  };
-
-
-  // registro(){
-  //   document.getElementById("registro-inicio")?.scrollIntoView({behavior:"smooth"});
-  // };
-
-
-  // login(){
-  //   document.getElementById("login-inicio")?.scrollIntoView({behavior:"smooth"});
-  // };
-  
-
-
-
 
 
 

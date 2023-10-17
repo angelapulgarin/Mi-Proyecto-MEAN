@@ -5,16 +5,18 @@ a{
 }
 
 .nav-link.active , .navbar-brand {
-    color: white !important; /* Cambia el color del texto a blanco */
+    color: white !important; 
 }
 
 .navbar-nav .nav-link:hover , .navbar-brand:hover {
     color: #65b24a;
 }
 
-/* Cambia el color del texto a verde cuando se hace clic en el enlace */
+
 .navbar-nav .nav-link:active , .navbar-brand:active {
     color: #65b24a;
 }
 
-
+header{
+    height: 56px;
+}
