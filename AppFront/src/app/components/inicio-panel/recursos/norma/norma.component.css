@@ -238,3 +238,37 @@ h4 {
  }
 
 }
+
+
+
+
+@media (min-width: 769px) and (max-width: 1059px) {
+  .contenedor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 7%;
+    /* Establece el flujo de columna */
+
+
+  }
+
+  .contenedor-cards .card1,
+  .contenedor-cards .card2,
+  .contenedor-cards .card3,
+  .contenedor-cards .card4,
+  .contenedor-cards .card5,
+  .contenedor-cards .card6,
+  .contenedor-cards .card7,
+  .contenedor-cards .card8,
+  .contenedor-cards .card9 {
+    width: 40%;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  
+
+}

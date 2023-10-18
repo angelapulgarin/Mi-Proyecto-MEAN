@@ -81,6 +81,7 @@ export class SeguimientoComponent {
 
 
 
+    
 
     generarPdf() {
       
@@ -110,7 +111,6 @@ export class SeguimientoComponent {
       docResult.save('informe.pdf');
     });
 
-  
 
 
     }

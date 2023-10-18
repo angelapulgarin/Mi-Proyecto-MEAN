@@ -55,6 +55,7 @@
   margin-left: 5%;
   Color: aliceblue;
   background-color: #65b24a;
+  border-color: none;
 }
 
 a {
@@ -65,9 +66,9 @@ a {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  {
   .secfinal {
-    height: 170px;
+    height: 185px;
     padding-left: 0;
 
   }
@@ -123,6 +124,8 @@ a {
 
     text-align: center;
     margin: 0 auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
     
   }
 
@@ -136,6 +139,22 @@ a {
 
 
 }
+
+
+
+
+@media (min-width: 769px) and (max-width: 1300px)  {
+  .secfinal {
+    height: 250px;
+    padding-left: 20px;
+  }
+
+  
+}
+
+
+
+
 
 
 
@@ -183,8 +202,8 @@ footer {
 
 
 
+/* 
 
-/* h1, h2, h3, h4, h5, h6 {} */
 a,
 a:hover,
 a:focus,
@@ -221,7 +240,7 @@ height: auto;
 }
 section {
     padding: 60px 0;
-   /* min-height: 100vh;*/
+
 }
 .footer {
   background: #0f0c29;
@@ -230,7 +249,7 @@ section {
   padding-top: 80px;
   padding-bottom: 40px;
 }
-/*END FOOTER SOCIAL DESIGN*/
+
 
 @media only screen and (max-width:768px) { 
 .single_footer{margin-bottom:30px;}
@@ -240,7 +259,7 @@ color: #fff;
 margin-top: 0;
 margin-bottom: 25px;
 font-weight: 700;
-text-transform: uppercase;
+
 font-size: 20px;
 }
 .single_footer h4::after {
@@ -264,9 +283,9 @@ color: #fff;
 transition: all 0.3s ease 0s;
 line-height: 36px;
 font-size: 15px;
-text-transform: capitalize;
+
 }
-.single_footer ul li a:hover { color: #ff3666; }
+.single_footer ul li a:hover { color: #66b24ad5; }
 
 
 .single_footer_address ul li{color:#fff;}
@@ -281,7 +300,7 @@ margin: 0;
 padding: 0;
 }
 
-/*START NEWSLETTER CSS*/
+
 .subscribe {
 display: block;
 position: relative;
@@ -336,9 +355,9 @@ background-color: transparent;
 -webkit-border-radius: 0;
 border-radius: 0;
 }
-/*END NEWSLETTER CSS*/
 
-/*START SOCIAL PROFILE CSS*/
+
+
 .social_profile {margin-top:40px;}
 .social_profile ul{
 list-style: outside none none;
@@ -349,7 +368,7 @@ padding: 0;
 .social_profile ul li a {
 text-align: center;
 border: 0px;
-text-transform: uppercase;
+
 transition: all 0.3s ease 0s;
 margin: 0px 5px;
 font-size: 18px;
@@ -377,7 +396,7 @@ border: 1px solid #ff3666;
 color:#fff;
 border:0px;
 }
-/*END SOCIAL PROFILE CSS*/
+
 .copyright {
 margin-top: 70px;
 padding-top: 40px;
@@ -387,4 +406,4 @@ border-top: 1px solid rgba(255,255,255,0.4);
 text-align: center;
 }
 .copyright a{color:#01c7e9;transition: all 0.2s ease 0s;}
-.copyright a:hover{color:#ff3666;}
+.copyright a:hover{color:#ff3666;} */
