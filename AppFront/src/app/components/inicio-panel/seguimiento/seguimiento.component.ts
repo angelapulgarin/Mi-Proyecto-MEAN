@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
 
 import { ListaServiciosService } from 'src/app/service/lista-servicios.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seguimiento',
@@ -13,13 +14,23 @@ import { ListaServiciosService } from 'src/app/service/lista-servicios.service';
 
 export class SeguimientoComponent {
 
-
+  router = inject(Router);
 
   constructor(public servicio: ListaServiciosService) { }
 
   arrServicios: any[] = [];
 
   single: any[] = [];
+
+  
+     
+    
+ 
+  
+
+
+
+
 
 
   async ngOnInit() {
@@ -28,27 +39,62 @@ export class SeguimientoComponent {
 
     console.log(listaServicios);
 
-    this.single = [
-      {
-        "name": "Planear",
-        "value": this.arrServicios[0].planear
-      },
-      {
-        "name": "Hacer",
-        "value": this.arrServicios[0].hacer
-      },
-      {
-        "name": "Verificar",
-        "value": this.arrServicios[0].verificar
-      },
-      {
-        "name": "Actuar",
-        "value": this.arrServicios[0].actuar
-      }
-    ];
+    // if (this.arrServicios.length > 0) {
+    //   this.single = [
+    //     {
+    //       "name": "Planear",
+    //       "value": this.arrServicios[0].planear
+    //     },
+    //     {
+    //       "name": "Hacer",
+    //       "value": this.arrServicios[0].hacer
+    //     },
+    //     {
+    //       "name": "Verificar",
+    //       "value": this.arrServicios[0].verificar
+    //     },
+    //     {
+    //       "name": "Actuar",
+    //       "value": this.arrServicios[0].actuar
+    //     }
+    //   ];
+    // } else {
+      
+    //   let usuario: any = document.getElementById("texto-usuario");
+    //   usuario.innerHTML = "No cuentas con un seguimiento del SG-SST. Contrata nuestros servicios de asesoría y accede al seguimiento en línea de todas las fases del SG-SST. ¡Ponte en contacto con nosotros!";
+    // };
 
+      this.single = [
+        {
+          "name": "Planear",
+          "value": this.arrServicios[0].planear
+        },
+        {
+          "name": "Hacer",
+          "value": this.arrServicios[0].hacer
+        },
+        {
+          "name": "Verificar",
+          "value": this.arrServicios[0].verificar
+        },
+        {
+          "name": "Actuar",
+          "value": this.arrServicios[0].actuar
+        }
+      ];
+     
+      
+      
+    
+
+    
 
   }
+
+  grafica():boolean {
+
+    return this.arrServicios.length > 0;
+    };   
 
 
   view: [number, number] = [750, 300];
@@ -83,37 +129,37 @@ export class SeguimientoComponent {
 
     
 
-    generarPdf() {
+    // generarPdf() {
       
-      const DATA: any = document.getElementById('contenidoPdf');
+    //   const DATA: any = document.getElementById('contenidoPdf');
     
       
-      const doc = new jsPDF('p', 'pt', 'letter');
+    //   const doc = new jsPDF('p', 'pt', 'letter');
     
-      const options = {
-        background: 'white',
-        scale: 3
-      };
+    //   const options = {
+    //     background: 'white',
+    //     scale: 3
+    //   };
     
       
-      html2canvas(DATA, options).then((canvas) => {
-        const img = canvas.toDataURL('image/PNG');
+    //   html2canvas(DATA, options).then((canvas) => {
+    //     const img = canvas.toDataURL('image/PNG');
         
       
-      const bufferX = 15;
-      const bufferY = 15;
-      const imgProps = (doc as any).getImageProperties(img);
-      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
-      return doc;
-    }).then((docResult) => {
-      docResult.save('informe.pdf');
-    });
+    //   const bufferX = 15;
+    //   const bufferY = 15;
+    //   const imgProps = (doc as any).getImageProperties(img);
+    //   const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
+    //   const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    //   doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+    //   return doc;
+    // }).then((docResult) => {
+    //   docResult.save('informe.pdf');
+    // });
 
 
 
-    }
+    // }
     
 
 

@@ -19,7 +19,7 @@ export class InicioPanelComponent {
     localStorage.removeItem('user_token');
     this.router.navigate(['/home']);
   }
-
+  
 
 
 

@@ -20,6 +20,7 @@
                     <div (click)="contactanos()"><a class="nav-link" routerLink="contactanos" routerLinkActive="active"  (click)="esconderMenu()" >Contactanos</a></div>
                     <div ><a  (click)="esconderMenu()" class="nav-link" routerLink="register" routerLinkActive="active" *ngIf="!userService.isLogged()" >Regístrate</a></div>
                     <div ><a  (click)="esconderMenu()" class="nav-link" routerLink="login" routerLinkActive="active"  *ngIf="!userService.isLogged()" >Iniciar Sesión</a></div>
+                    
                 </div>
             </div>
 

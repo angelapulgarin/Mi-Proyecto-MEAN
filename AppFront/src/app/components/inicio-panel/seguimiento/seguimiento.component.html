@@ -1,15 +1,55 @@
-<section  id="contenidoPdf"  class="contendeor-cards">
 
-  
+
+<section  *ngIf="!grafica()" class="contenedor-usuario" >
+
+
+  <p id="texto-usuario">
+    No cuentas con un seguimiento del SG-SST. Contrata nuestros servicios de asesoría y accede al seguimiento en línea
+    de todas las fases del SG-SST.
+  </p>
+
+  <p id="texto-usuario">
+    ¡Ponte en contacto con nosotros!
+  </p>
+
+  <section class="numeros">
+
+    <img class="imgredes" src="../../../assets/imagens/contact/Imagen1.png">
+    <p class="wp">(57)3127567258 </p>
+
+
+  </section>
+
+  <section class="email">
+
+    <img class="imgredes" src="../../../assets/imagens/contact/correo.png">
+    <p class="text-email">informacion@aymconsultores.co </p>
+
+
+  </section>
+
+
+
+
+
+</section>
+
+<section  *ngIf="grafica()" id="contenidoPdf" class="contendeor-cards" >
+
 
 
 
   <div class="card">
     <div class="card-details">
       <p class="text-title">Avance del SG-SST</p>
+
     </div>
 
+
+
     <section class="content-general">
+
+
 
       <section class="grafico">
         <ngx-charts-advanced-pie-chart [view]="view" scheme="aqua" [results]="single" [gradient]="gradient"
@@ -20,9 +60,14 @@
     </section>
 
     <section class="contenedor-tituloTabla">
+
+
+
+      
       <p class="titulo-tabla">
 
-        Recuerda que, dependiendo de la calificación obtenida, debes realizar un plan de mejoramiento de acuerdo con la siguiente tabla:
+        Recuerda que, dependiendo de la calificación obtenida, debes realizar un plan de mejoramiento de acuerdo con la
+        siguiente tabla:
 
       </p>
     </section>
@@ -30,222 +75,224 @@
 
     <section class="contenedor-tabla1">
 
-    <section class="tabla">
+      <section class="tabla">
 
 
-      <table>
-        <thead>
-          <tr>
-            <th>Criterio</th>
-            <th>Valoración</th>
-            <th>Acción</th>
-        
-
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Si el puntaje obtenido es menor al 60%</td>
-            <td>CRÍTICO</td>
-            <td >
-
-              <ul>
-                <li>
-                  Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento de inmediato.
-                </li>
-                <li>
-                  Enviar a la ARL reporte de avances en el término máximo de tres (3) meses.
-                </li>
-                <li>
-                  Seguimiento anual y plan de visita por parte del Ministerio del Trabajo.
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Si el puntaje obtenido está entre el 60 y 85%</td>
-            <td>MODERADAMENTE ACEPTABLE</td>
-            <td>
-
-              <ul>
-                <li>
-                  Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento.
-                </li>
-                <li>
-                  Enviar a la ARL reporte de avances en el término máximo de tres (6) meses.
-                </li>
-                <li>
-                  Plan de visita por parte del Ministerio del Trabajo.
-                </li>
-              </ul>
-            </td>
-        
-            
-          </tr>
-
-          <tr>
-            <td>Si el puntaje obtenido es mayor al 85%</td>
-            <td>ACEPTABLE</td>
-            <td>
-
-              <ul>
-                <li>
-                  Mantener la calificación y evidencias a disposición del Ministerio del Trabajo, e incluir en el Plan de Anual de Trabajo las mejoras detectadas.
-                </li>
-                
-              </ul>
-            </td>
-        
-            
-          </tr>
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Valoración</th>
+              <th>Acción</th>
 
 
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Si el puntaje obtenido es menor al 60%</td>
+              <td>CRÍTICO</td>
+              <td>
+
+                <ul>
+                  <li>
+                    Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento de inmediato.
+                  </li>
+                  <li>
+                    Enviar a la ARL reporte de avances en el término máximo de tres (3) meses.
+                  </li>
+                  <li>
+                    Seguimiento anual y plan de visita por parte del Ministerio del Trabajo.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Si el puntaje obtenido está entre el 60 y 85%</td>
+              <td>MODERADAMENTE ACEPTABLE</td>
+              <td>
+
+                <ul>
+                  <li>
+                    Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento.
+                  </li>
+                  <li>
+                    Enviar a la ARL reporte de avances en el término máximo de tres (6) meses.
+                  </li>
+                  <li>
+                    Plan de visita por parte del Ministerio del Trabajo.
+                  </li>
+                </ul>
+              </td>
+
+
+            </tr>
+
+            <tr>
+              <td>Si el puntaje obtenido es mayor al 85%</td>
+              <td>ACEPTABLE</td>
+              <td>
+
+                <ul>
+                  <li>
+                    Mantener la calificación y evidencias a disposición del Ministerio del Trabajo, e incluir en el Plan
+                    de Anual de Trabajo las mejoras detectadas.
+                  </li>
+
+                </ul>
+              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
 
 
 
+
+
+
+      </section>
 
     </section>
 
-  </section>
 
 
 
-  
-<section class="contenedor-tabla2">
+    <section class="contenedor-tabla2">
 
-  <section class="tabla">
-  
-  
-    <table>
-      <thead>
-        <tr>
-          <th>Criterio</th>
-          <th>Valoración</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Si el puntaje obtenido es menor al 60%</td>
-          <td>CRÍTICO</td>
-        </tr>
-        <tr>
-          <th colspan="2">Acción</th>
-        </tr>
-        <tr>
-          <td colspan="2">
-  
-            <ul>
-              <li>
-                Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento de inmediato.
-              </li>
-              <li>
-                Enviar a la ARL reporte de avances en el término máximo de tres (3) meses.
-              </li>
-              <li>
-                Seguimiento anual y plan de visita por parte del Ministerio del Trabajo.
-              </li>
-            </ul>
-          </td>
-        </tr>
-        
-      </tbody>
-    </table>
-  
-  
-    
-  
-  
-  
-  
-  
-  
-  </section>
-  
-  
-  <section class="tabla">
-  
-  
-    <table>
-      <thead>
-        <tr>
-          <th>Criterio</th>
-          <th>Valoración</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Si el puntaje obtenido está entre el 60 y 85%</td>
-          <td>MODERADAMENTE ACEPTABLE</td>
-        </tr>
-        <tr>
-          <th colspan="2">Acción</th>
-        </tr>
-        <tr>
-          <td colspan="2">
-  
-            <ul>
-              <li>
-                Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento.
-              </li>
-              <li>
-                Enviar a la ARL reporte de avances en el término máximo de tres (6) meses.
-              </li>
-              <li>
-                Plan de visita por parte del Ministerio del Trabajo.
-              </li>
-            </ul>
-          </td>
-        </tr>
-        
-      </tbody>
-    </table>
-  
-  
-  </section>
-  
-  
-  
-  
-  
-  <section class="tabla">
-  
-  
-    <table>
-      <thead>
-        <tr>
-          <th>Criterio</th>
-          <th>Valoración</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Si el puntaje obtenido es mayor al 85%</td>
-          <td>ACEPTABLE</td>
-        </tr>
-        <tr>
-          <th colspan="2">Acción</th>
-        </tr>
-        <tr>
-          <td colspan="2">
-  
-            <ul>
-              <li>
-                Mantener la calificación y evidencias a disposición del Ministerio del Trabajo, e incluir en el Plan de Anual de Trabajo las mejoras detectadas.
-              </li>
-            
-            </ul>
-          </td>
-        </tr>
-        
-      </tbody>
-    </table>
-  
-  
-  </section>
-  
-  </section>
+      <section class="tabla">
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Valoración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Si el puntaje obtenido es menor al 60%</td>
+              <td>CRÍTICO</td>
+            </tr>
+            <tr>
+              <th colspan="2">Acción</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+
+                <ul>
+                  <li>
+                    Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento de inmediato.
+                  </li>
+                  <li>
+                    Enviar a la ARL reporte de avances en el término máximo de tres (3) meses.
+                  </li>
+                  <li>
+                    Seguimiento anual y plan de visita por parte del Ministerio del Trabajo.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+      </section>
+
+
+      <section class="tabla">
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Valoración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Si el puntaje obtenido está entre el 60 y 85%</td>
+              <td>MODERADAMENTE ACEPTABLE</td>
+            </tr>
+            <tr>
+              <th colspan="2">Acción</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+
+                <ul>
+                  <li>
+                    Realizar y tener a disposición del Ministerio del Trabajo un Plan de Mejoramiento.
+                  </li>
+                  <li>
+                    Enviar a la ARL reporte de avances en el término máximo de tres (6) meses.
+                  </li>
+                  <li>
+                    Plan de visita por parte del Ministerio del Trabajo.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </section>
+
+
+
+
+
+      <section class="tabla">
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Valoración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Si el puntaje obtenido es mayor al 85%</td>
+              <td>ACEPTABLE</td>
+            </tr>
+            <tr>
+              <th colspan="2">Acción</th>
+            </tr>
+            <tr>
+              <td colspan="2">
+
+                <ul>
+                  <li>
+                    Mantener la calificación y evidencias a disposición del Ministerio del Trabajo, e incluir en el Plan
+                    de Anual de Trabajo las mejoras detectadas.
+                  </li>
+
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </section>
+
+    </section>
 
 
 
@@ -257,5 +304,4 @@
 </section>
 
 
-<button (click)="generarPdf()" >Descargar Informe</button>
-
+<!-- <button (click)="generarPdf()" >Descargar Informe</button> -->

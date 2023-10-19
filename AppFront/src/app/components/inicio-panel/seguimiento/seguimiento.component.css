@@ -43,6 +43,49 @@
   margin: 0;
 }
 
+.contenedor-usuario{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 7%;
+  align-items: center;
+}
+
+#texto-usuario {
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  color: #224b9d;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 0;
+  margin-bottom: 2%;
+}
+
+
+.numeros,
+.email {
+  margin: 1%;
+  display: flex;
+  justify-content: justify;
+  align-items: center;
+
+}
+
+.wp,
+.text-email {
+  padding-left: 5%;
+  margin: 0;
+}
+
+.imgredes {
+  width: 30px;
+}
+
+
+
+
+
 
 
 .grafico {
