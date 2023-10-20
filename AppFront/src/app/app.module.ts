@@ -22,8 +22,6 @@ import { FooterComponent } from './components/body/footer/footer.component';
 import { ContactanosComponent } from './components/contactanos/contactanos.component';
 import { InicioPanelComponent } from './components/inicio-panel/inicio-panel.component';
 import { SeguimientoComponent } from './components/inicio-panel/seguimiento/seguimiento.component';
-import { BeneficiosComponent } from './components/inicio-panel/beneficios/beneficios.component';
-import { PerfilComponent } from './components/inicio-panel/perfil/perfil.component';
 import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
 import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
 import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
@@ -44,8 +42,6 @@ import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.c
     ContactanosComponent,
     InicioPanelComponent,
     SeguimientoComponent,
-    BeneficiosComponent,
-    PerfilComponent,
     GuiasComponent,
     LudicasComponent,
     NormaComponent,

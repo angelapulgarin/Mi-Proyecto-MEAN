@@ -1,4 +1,4 @@
-import { Component,inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
@@ -16,18 +16,21 @@ export class SeguimientoComponent {
 
   router = inject(Router);
 
-  constructor(public servicio: ListaServiciosService) { }
+  constructor(public servicio: ListaServiciosService) { 
+   
+  }
+
 
   arrServicios: any[] = [];
 
   single: any[] = [];
 
   
-     
-    
- 
   
+  grafica(): boolean {
 
+    return this.arrServicios.length > 0;
+  };
 
 
 
@@ -39,62 +42,32 @@ export class SeguimientoComponent {
 
     console.log(listaServicios);
 
-    // if (this.arrServicios.length > 0) {
-    //   this.single = [
-    //     {
-    //       "name": "Planear",
-    //       "value": this.arrServicios[0].planear
-    //     },
-    //     {
-    //       "name": "Hacer",
-    //       "value": this.arrServicios[0].hacer
-    //     },
-    //     {
-    //       "name": "Verificar",
-    //       "value": this.arrServicios[0].verificar
-    //     },
-    //     {
-    //       "name": "Actuar",
-    //       "value": this.arrServicios[0].actuar
-    //     }
-    //   ];
-    // } else {
-      
-    //   let usuario: any = document.getElementById("texto-usuario");
-    //   usuario.innerHTML = "No cuentas con un seguimiento del SG-SST. Contrata nuestros servicios de asesoría y accede al seguimiento en línea de todas las fases del SG-SST. ¡Ponte en contacto con nosotros!";
-    // };
-
-      this.single = [
-        {
-          "name": "Planear",
-          "value": this.arrServicios[0].planear
-        },
-        {
-          "name": "Hacer",
-          "value": this.arrServicios[0].hacer
-        },
-        {
-          "name": "Verificar",
-          "value": this.arrServicios[0].verificar
-        },
-        {
-          "name": "Actuar",
-          "value": this.arrServicios[0].actuar
-        }
-      ];
-     
-      
-      
     
+    this.single = [
+      {
+        "name": "Planear",
+        "value": this.arrServicios[0].planear
+      },
+      {
+        "name": "Hacer",
+        "value": this.arrServicios[0].hacer
+      },
+      {
+        "name": "Verificar",
+        "value": this.arrServicios[0].verificar
+      },
+      {
+        "name": "Actuar",
+        "value": this.arrServicios[0].actuar
+      }
+    ];
 
-    
+    this.grafica();
+
+
 
   }
 
-  grafica():boolean {
-
-    return this.arrServicios.length > 0;
-    };   
 
 
   view: [number, number] = [750, 300];
@@ -107,60 +80,60 @@ export class SeguimientoComponent {
   isDoughnut: boolean = false;
 
   // colorScheme = {
-    
+
   //   domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   // };
 
- 
-
-    onSelect(data: any): void {
-      console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-    }
-
-    onActivate(data: any): void {
-      console.log('Activate', JSON.parse(JSON.stringify(data)));
-    }
-
-    onDeactivate(data: any): void {
-      console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-    }
 
 
+  onSelect(data: any): void {
+    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+  }
 
-    
+  onActivate(data: any): void {
+    console.log('Activate', JSON.parse(JSON.stringify(data)));
+  }
 
-    // generarPdf() {
-      
-    //   const DATA: any = document.getElementById('contenidoPdf');
-    
-      
-    //   const doc = new jsPDF('p', 'pt', 'letter');
-    
-    //   const options = {
-    //     background: 'white',
-    //     scale: 3
-    //   };
-    
-      
-    //   html2canvas(DATA, options).then((canvas) => {
-    //     const img = canvas.toDataURL('image/PNG');
-        
-      
-    //   const bufferX = 15;
-    //   const bufferY = 15;
-    //   const imgProps = (doc as any).getImageProperties(img);
-    //   const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
-    //   const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-    //   doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
-    //   return doc;
-    // }).then((docResult) => {
-    //   docResult.save('informe.pdf');
-    // });
+  onDeactivate(data: any): void {
+    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+  }
 
 
 
-    // }
-    
+
+
+  // generarPdf() {
+
+  //   const DATA: any = document.getElementById('contenidoPdf');
+
+
+  //   const doc = new jsPDF('p', 'pt', 'letter');
+
+  //   const options = {
+  //     background: 'white',
+  //     scale: 3
+  //   };
+
+
+  //   html2canvas(DATA, options).then((canvas) => {
+  //     const img = canvas.toDataURL('image/PNG');
+
+
+  //   const bufferX = 15;
+  //   const bufferY = 15;
+  //   const imgProps = (doc as any).getImageProperties(img);
+  //   const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
+  //   const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+  //   doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+  //   return doc;
+  // }).then((docResult) => {
+  //   docResult.save('informe.pdf');
+  // });
+
+
+
+  // }
+
 
 
 

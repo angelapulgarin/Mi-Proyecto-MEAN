@@ -11,8 +11,6 @@ import { ContactanosComponent } from './components/contactanos/contactanos.compo
 import { InicioPanelComponent } from './components/inicio-panel/inicio-panel.component';
 import { loginGuard } from './guards/login.guard';
 import { SeguimientoComponent } from './components/inicio-panel/seguimiento/seguimiento.component';
-import { BeneficiosComponent } from './components/inicio-panel/beneficios/beneficios.component';
-import { PerfilComponent } from './components/inicio-panel/perfil/perfil.component';
 import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
 import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
 import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
@@ -37,8 +35,7 @@ const routes: Routes = [
       { path: 'guias', component: GuiasComponent, canActivate: [loginGuard] },
       { path: 'actividades-ludicas', component: LudicasComponent, canActivate: [loginGuard] },
       { path: 'normatividad', component: NormaComponent, canActivate: [loginGuard] },
-      { path: 'beneficios', component: BeneficiosComponent, canActivate: [loginGuard] },
-      { path: 'perfil', component: PerfilComponent, canActivate: [loginGuard] },
+
 
     ]
 
