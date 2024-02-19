@@ -25,6 +25,10 @@ import { SeguimientoComponent } from './components/inicio-panel/seguimiento/segu
 import { GuiasComponent } from './components/inicio-panel/recursos/guias/guias.component';
 import { LudicasComponent } from './components/inicio-panel/recursos/ludicas/ludicas.component';
 import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.component';
+import { PlanearComponent } from './components/inicio-panel/planear/planear.component';
+import { HacerComponent } from './components/inicio-panel/hacer/hacer.component';
+import { VerificarComponent } from './components/inicio-panel/verificar/verificar.component';
+import { ActuarComponent } from './components/inicio-panel/actuar/actuar.component';
 
 
 
@@ -45,6 +49,10 @@ import { NormaComponent } from './components/inicio-panel/recursos/norma/norma.c
     GuiasComponent,
     LudicasComponent,
     NormaComponent,
+    PlanearComponent,
+    HacerComponent,
+    VerificarComponent,
+    ActuarComponent,
     
   
   ],

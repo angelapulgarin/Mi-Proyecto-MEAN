@@ -40,6 +40,20 @@ const seguimientoSchema = mongoose.Schema(
 export default mongoose.model('seguimientos', seguimientoSchema);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // servicio_contratado:{
 //     type:[mongoose.Schema.Types.ObjectId],
 //     ref:'servicios',
